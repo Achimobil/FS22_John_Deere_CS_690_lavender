@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<wheel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../shared/xml/schema/wheel.xsd">
+    <brand>VREDESTEIN</brand>
+    <name>Traxion 85</name>
+    <default>
+        <physics radius="0.976" width="0.52" mass="0.36" tireType="mud" frictionScale="1.60" maxLongStiffness="9" maxLatStiffness="110" maxLatStiffnessLoad="2"/>
+        <tire filename="$data/shared/wheels/tires/vredestein/traxion85/R42_traxion85.i3d" nodeLeft="1|0" nodeRight="1|0" maxDeformation="0.089" sideDeformOffset="0.971" isCareWheel="false" tireTrackAtlasIndex="0"/>
+        <outerRim filename="$data/shared/wheels/rims/rim001.i3d" node="1|0" widthAndDiam="18 42"/>
+        <innerRim filename="pneu/pneu.i3d" nodeLeft="0|2" nodeRight="0|3" widthAndDiam="31 34" offset="0.08"/>
+    </default>
+    <configurations>
+        <configuration id="duplaDentro" >
+            <innerRim filename="pneu/pneu.i3d" nodeLeft="0|4" nodeRight="0|5" widthAndDiam="31 34" offset="0.09"/>
+        </configuration>
+		<configuration id="duplaFora" >
+            <innerRim filename="pneu/pneu.i3d" nodeLeft="0|0" nodeRight="0|1" widthAndDiam="31 34" offset="-0.12"/>
+        </configuration>
+    </configurations>
+</wheel>

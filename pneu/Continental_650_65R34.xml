@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8' standalone='no'?>
+<wheel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../shared/xml/schema/wheel.xsd">
+    <brand>CONTINENTAL</brand>
+    <name>TractorMaster</name>
+    <default>
+        <physics radius="0.86" width="0.65" mass="0.32" tireType="mud" frictionScale="1.60" maxLongStiffness="10" maxLatStiffness="120" maxLatStiffnessLoad="2"/>
+        <tire filename="$data/shared/wheels/tires/continental/tractorMaster/R34_tractorMaster.i3d" nodeLeft="2|0" nodeRight="2|0" maxDeformation="0.086" sideDeformOffset="0.964" isCareWheel="false" tireTrackAtlasIndex="0"/>
+        <outerRim filename="$data/shared/wheels/rims/rim001.i3d" node="0|0" widthAndDiam="20 34"/>
+        <innerRim filename="pneu/pneu.i3d" nodeLeft="1|1" nodeRight="1|0" widthAndDiam="47 44"/>
+    </default>
+    <configurations>
+        <configuration id="invertida">
+            <innerRim filename="pneu/pneu.i3d" nodeLeft="1|0" nodeRight="1|1" widthAndDiam="47 44"/>
+        </configuration>
+    </configurations>
+</wheel>

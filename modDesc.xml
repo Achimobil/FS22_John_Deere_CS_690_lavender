@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="75">
+    <author>Agro Tonho</author>
+    <version>1.0.0.0</version>
+    <title>
+        <en>John Deere CS 690 And 606SH/608SH</en>
+        <de>John Deere CS 690 Und 606SH/608SH</de>
+    </title>
+    <description>
+        <en>
+<![CDATA[The John Deere CS690 cotton picker is here to enhance your property. With its non-stop bale production capacity, your farm's yield only tends to grow, as well as its two header options scale the job according to the size and needs of your property.
+In this mod you will find a cotton picker John Deere CS690 and two hitchable headers John Deere 606SH and 608 SH
+
+CS690 Specifications:
+- Price: $613,000
+- Power: 550 hp
+- Top speed: 19.88 km/h
+- Optional transport wheels, double front wheels and tracks, each with two variations of the rear wheels
+- Continental, Michelin, Mitas, Trelleborg, Vredestein and BKT tire options
+- 4 optional mirrors, 3 of them with 4 mirrors and one optional with 6 mirrors
+- Optional numbers from 1 to 9
+- Optional camera monitor inside
+- Optional 4 shades of cabin glass
+- Realistic animations on interior panels
+- Door opening animation influencing the interior sound, making the animation more realistic
+- Bench adjustment animations affecting the internal camera position
+- Animation of the sunshade, mirrors and steering column
+- Animation of the driver when turning on the key
+
+Characteristics of headers:
+Both have optional weights
+Working speed: 6.2 mph
+
+John Deere 606SH:
+- Price: $37000
+- Working width: 4.88 meters
+
+John Deere 608SH:
+- Price: $50000
+- Working width: 6.8 meters]]>
+        </en>
+        <de>
+<![CDATA[Der John Deere CS690 Baumwollernter ist dazu da, um Ihren Betrieb zu verbessern. Mit seiner Non-Stop-Ballenproduktionskapazität wird der Ertrag Ihres Betriebes immer größer, und seine zwei Schneidwerkoptionen passen die Arbeit an die Größe und die Bedürfnisse Ihres Betriebs an.
+In diesem Mod finden Sie einen John Deere CS690 Baumwollernter und zwei anbaubare Schneidwerke John Deere 606SH und 608 SH.
+
+CS690-Spezifikationen:
+- Preis: 613.000 €
+- Leistung: 550 PS
+- Höchstgeschwindigkeit: 32 km/h
+- Optionale Transporträder, doppelte Vorderräder und Ketten, jeweils mit zwei Varianten der Hinterräder
+- Reifenoptionen von Continental, Michelin, Mitas, Trelleborg, Vredestein und BKT
+- 4 optionale Spiegel, 3 davon mit 4 Spiegeln und einer optional mit 6 Spiegeln
+- Optionale Zahlen von 1 bis 9
+- Optionaler Kameramonitor im Inneren
+- Optional 4 Farbtöne Kabinenscheiben
+- Realistische Animationen auf Innenverkleidungen
+- Türöffnungsanimation, die den Innenraumklang beeinflusst und die Animation realistischer macht
+- Animationen zur Bankeinstellung, die sich auf die interne Kameraposition auswirken
+- Animation von Sonnenschutz, Spiegeln und Lenksäule
+- Animation des Fahrers beim Einschalten des Schlüssels
+
+Eigenschaften Schneidwerke:
+Beide haben optionale Gewichte
+Arbeitsgeschwindigkeit: 10 km/h
+
+John Deere 606SH:
+- Preis: 37000 €
+- Arbeitsbreite: 4,88 Meter
+
+John Deere 608SH:
+- Preis: 50000 €
+- Arbeitsbreite: 6,8 Meter]]>
+        </de>
+        <br>
+<![CDATA[A selecionadora de algodão John Deere CS690 veio para incrementar a sua propriedade. Com a capacidade de produção de fardos sem parar, o rendimento de sua fazenda só tende a crescer, assim como suas duas opções de cabeçalho dimensionam o trabalho de acordo com o tamanho e necessidade da sua propriedade.
+Neste mod você encontra uma selecionadora de algodão John Deere CS690 e dois cabeçalhos engatáveis John Deere 606SH e 608 SH
+Especificações CS690
+- Preço: 613000€
+- Potência: 550 CVs
+- Velocidade máxima: 32 km/h
+- Opcionais de rodas para transporte, duplas frontais e esteiras, cada uma com duas variações das rodas traseiras
+- Opcionais de pneus Continental, Michelin, Mitas, Trelleborg, Vredestein e BKT
+- 4 opcionais de espelhos, sendo 3 deles com 4 espelhos e um opcional com 6 espelhos
+- Opcionais de números do 1 até o 9
+- Opcional do monitor da câmera no interior
+- Opcional de 4 tonalidades dos vidros da cabine
+- Animações realistas nos painéis do interior
+- Animação de abertura da porta influenciando no som do interior, tornando a animação mais realista
+- Animações de regulagem do banco afetando na posição da câmera interna
+- Animação do para sol, espelhos e coluna do volante
+- Animação do motorista ao ligar a chave
+
+Características dos cabeçalhos
+Ambos possuem opcionais de pesos
+Velocidade de trabalho: 10 km/h
+
+John Deere 606SH
+- Preço: 37000€
+- Largura de trabalho: 4,88 metros
+
+John Deere 608SH
+- Preço: 50000€
+- Largura de trabalho: 6,8 metros]]>
+        </br>
+    </description>
+    <iconFilename>icon_CS690.dds</iconFilename>
+    <multiplayer supported="true" />
+    <storeItems>
+		<storeItem xmlFilename="CS690.xml"/>
+		<storeItem xmlFilename="606SH.xml"/>
+		<storeItem xmlFilename="608SH.xml"/>
+    </storeItems>
+	
+	<vehicleTypes>
+		<type name="CS690" parent="combineDrivable" className="Vehicle" filename="$dataS/scripts/vehicles/Vehicle.lua">
+            <specialization name="baler" />
+        </type>				
+	</vehicleTypes>
+	
+	<l10n>
+		<text name="pesos"><en>Weights</en><de>Gewichte</de><br>Pesos</br></text>
+		<text name="numeros"><en>Numbers</en><de>Zahlen</de><br>Números</br></text>
+		<text name="transporte"><en>Transport</en><de>Transport</de><br>Transporte</br></text>
+		<text name="espelhos"><en>Mirrors</en><de>Spiegel</de><br>espelhos</br></text>
+		<text name="triplo"><en>Triple mirrors</en><de>Dreifachspiegel</de><br>Espelhos triplos</br></text>
+		<text name="duploverde"><en>Double mirrors with green support</en><de>Doppelspiegel mit grüner Halterung</de><br>Espelhos duplos com suporte verde</br></text>
+		<text name="duplopreto"><en>Double mirrors with black support</en><de>Doppelspiegel mit schwarzem Träger</de><br>Espelhos duplos com suporte preto</br></text>
+		<text name="janelas"><en>Windows</en><de>Fenster</de><br>Janelas</br></text>
+		<text name="fume1"><en>Smoked 1</en><de>Getönt 1</de><br>Fumê 1</br></text>
+		<text name="fume2"><en>Smoked 2</en><de>Getönt 2</de><br>Fumê 2</br></text>
+		<text name="fume3"><en>Smoked 3</en><de>Getönt 3</de><br>Fumê 3</br></text>
+		<text name="monitorcamera"><en>Camera panel</en><de>Kamerapanel</de><br>Painel da câmera</br></text>
+	</l10n>
+</modDesc>

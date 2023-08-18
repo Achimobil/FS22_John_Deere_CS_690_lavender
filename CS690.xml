@@ -1,0 +1,1514 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="CS690" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="$data/shared/xml/schema/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>CS690</name>
+        <specs>
+            <power>550</power>
+            <maxSpeed>32</maxSpeed>
+			<combination xmlFilename="606SH.xml" />
+			<combination xmlFilename="608SH.xml" />
+        </specs>
+        <functions>
+            <function>$l10n_function_combine</function>
+			<function>$l10n_function_combineNeedsCutter</function>
+        </functions>
+        <image>store_CS690.dds</image>
+        <price>613000</price>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>JOHNDEERE</brand>
+        <category>cottonVehicles</category>
+        <shopTranslationOffset>0 -0.049 0</shopTranslationOffset>
+        <shopRotationOffset>-0.031 0 0</shopRotationOffset>
+        <shopFoldingState>1</shopFoldingState>
+        <vertexBufferMemoryUsage>4885760</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>856576</indexBufferMemoryUsage>
+        <textureMemoryUsage>5308416</textureMemoryUsage>
+        <audioMemoryUsage>686306</audioMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_harvester</typeDesc>
+        <filename>CS690.i3d</filename>
+        <sounds filename="som/motor.xml"/>
+        <size width="7" length="12.7" height="4.7" lengthOffset="-1.8" widthOffset="-0.25"/>
+        <speedLimit value="32" />
+		<components>
+            <component centerOfMass="0 1.1 0.6" solverIterationCount="25" mass="13130"/>
+            <component solverIterationCount="20" mass="11700"/>
+            <joint component1="1" component2="2" node="backAxisJoint" rotLimit="0 0 10" transLimit="0 0 0" maxRotDriveForce="0 0 40" rotDriveRotation="- - 0" rotDriveSpring="0 0 40" rotDriveDamping="0 0 40" breakable="false"/>
+        </components>
+        <schemaOverlay attacherJointPosition="0 0" name="VEHICLE" />
+        <mapHotspot type="HARVESTER" />
+    </base>
+
+    <wheels>
+        <wheelConfigurations>
+            <wheelConfiguration name="$l10n_transporte" price="0" brand="CONTINENTAL" saveId="CONTINENTAL_TRASNPORTE">
+                <wheels baseConfig="CONTINENTAL_DEFAULT">
+                    <wheel filename="pneu/Continental_520_85R42.xml" configId="duplaDentro"/>
+                    <wheel filename="pneu/Continental_520_85R42.xml" configId="duplaDentro"/>
+                    <wheel filename="pneu/Continental_650_65R34.xml"/>
+                    <wheel filename="pneu/Continental_650_65R34.xml"/>
+                </wheels>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_transporte" price="0" brand="CONTINENTAL" saveId="CONTINENTAL_TRASNPORTE2">
+                <wheels baseConfig="CONTINENTAL_DEFAULT">
+                    <wheel filename="pneu/Continental_520_85R42.xml" configId="duplaDentro"/>
+                    <wheel filename="pneu/Continental_520_85R42.xml" configId="duplaDentro"/>
+                    <wheel filename="pneu/Continental_650_65R34.xml" configId="invertida"/>
+                    <wheel filename="pneu/Continental_650_65R34.xml" configId="invertida"/>
+                </wheels>
+				<objectChange node="wheelBackLeft" translationActive="0.33 0 0"/>
+				<objectChange node="wheelBackRight" translationActive="-0.33 0 0"/>
+				<objectChange node="1>0|0|0|0" translationActive="-0.2 0 0"/>
+				<objectChange node="1>0|1|0|0" translationActive="0.2 0 0"/>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_configuration_valueTwinWheelsAll" price="500" brand="CONTINENTAL" saveId="CONTINENTAL_DEFAULT">
+                <wheels differentialIndex="1" autoRotateBackSpeed="2" ackermannSteeringIndex="1">
+                    <wheel filename="pneu/Continental_520_85R42.xml" configId="duplaDentro" isLeft="true" hasTireTracks="true" hasParticles="true" >
+                        <physics tipOcclusionAreaGroupId="1" rotSpeed="-1" restLoad="7.7" repr="wheelFrontLeft"  forcePointRatio="0.5" frictionScale="2" initialCompression="35" suspTravel="0.22" spring="94" damper="80"/>
+                        <additionalWheel filename="pneu/Continental_520_85R42.xml" configId="duplaFora" offset="0.28" hasTireTracks="true" hasParticles="true"/>
+                    </wheel>
+                    <wheel filename="pneu/Continental_520_85R42.xml" configId="duplaDentro" isLeft="false" hasTireTracks="true" hasParticles="true" >
+                        <physics tipOcclusionAreaGroupId="1" rotSpeed="-1" restLoad="7.7" repr="wheelFrontRight" forcePointRatio="0.5" frictionScale="2" initialCompression="35" suspTravel="0.22" spring="94" damper="80"/>
+                        <additionalWheel filename="pneu/Continental_520_85R42.xml" configId="duplaFora" offset="0.28" hasTireTracks="true" hasParticles="true"/>
+                    </wheel>
+                    <wheel filename="pneu/Continental_650_65R34.xml" isLeft="true" hasTireTracks="true" hasParticles="true" >
+                        <physics tipOcclusionAreaGroupId="1" rotSpeed="-1" restLoad="6.2" repr="axisBackLeft"  driveNode="wheelBackLeft"  forcePointRatio="0.5" frictionScale="2" initialCompression="35" suspTravel="0.22" spring="77" damper="100"/>
+                        <steering node="steeringBar" nodeMinTransX="0.12" nodeMaxTransX="-0.12" />
+					</wheel>
+                    <wheel filename="pneu/Continental_650_65R34.xml" isLeft="false" hasTireTracks="true" hasParticles="true" >
+                        <physics tipOcclusionAreaGroupId="1" rotSpeed="-1" restLoad="6.2" repr="axisBackRight" driveNode="wheelBackRight" forcePointRatio="0.5" frictionScale="2" initialCompression="35" suspTravel="0.22" spring="77" damper="100"/>
+					</wheel>
+                </wheels>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_configuration_valueTwinWheelsAll" price="500" brand="CONTINENTAL" saveId="CONTINENTAL_DUPLA2">
+                <wheels baseConfig="CONTINENTAL_DEFAULT">
+                    <wheel filename="pneu/Continental_520_85R42.xml" configId="duplaDentro">
+                        <additionalWheel filename="pneu/Continental_520_85R42.xml" configId="duplaFora" offset="0.28" hasTireTracks="true" hasParticles="true"/>
+					</wheel>
+					<wheel filename="pneu/Continental_520_85R42.xml" configId="duplaDentro">
+                        <additionalWheel filename="pneu/Continental_520_85R42.xml" configId="duplaFora" offset="0.28" hasTireTracks="true" hasParticles="true"/>
+					</wheel>
+					<wheel filename="pneu/Continental_650_65R34.xml" configId="invertida"/>
+                    <wheel filename="pneu/Continental_650_65R34.xml" configId="invertida"/>
+                </wheels>
+				<objectChange node="wheelBackLeft" translationActive="0.33 0 0"/>
+				<objectChange node="wheelBackRight" translationActive="-0.33 0 0"/>
+				<objectChange node="1>0|0|0|0" translationActive="-0.2 0 0"/>
+				<objectChange node="1>0|1|0|0" translationActive="0.2 0 0"/>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_transporte" price="0" brand="MICHELIN" saveId="MICHELIN_TRASNPORTE">
+                <wheels baseConfig="CONTINENTAL_DEFAULT">
+                    <wheel filename="pneu/Michelin_520_85R42.xml" configId="duplaDentro"/>
+                    <wheel filename="pneu/Michelin_520_85R42.xml" configId="duplaDentro"/>
+                    <wheel filename="pneu/Michelin_650_65R34.xml"/>
+                    <wheel filename="pneu/Michelin_650_65R34.xml"/>
+                </wheels>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_transporte" price="0" brand="MICHELIN" saveId="MICHELIN_TRASNPORTE2">
+                <wheels baseConfig="CONTINENTAL_DEFAULT">
+                    <wheel filename="pneu/Michelin_520_85R42.xml" configId="duplaDentro"/>
+                    <wheel filename="pneu/Michelin_520_85R42.xml" configId="duplaDentro"/>
+                    <wheel filename="pneu/Michelin_650_65R34.xml" configId="invertida"/>
+                    <wheel filename="pneu/Michelin_650_65R34.xml" configId="invertida"/>
+                </wheels>
+				<objectChange node="wheelBackLeft" translationActive="0.33 0 0"/>
+				<objectChange node="wheelBackRight" translationActive="-0.33 0 0"/>
+				<objectChange node="1>0|0|0|0" translationActive="-0.2 0 0"/>
+				<objectChange node="1>0|1|0|0" translationActive="0.2 0 0"/>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_configuration_valueTwinWheelsAll" price="500" brand="MICHELIN" saveId="MICHELIN_DEFAULT">
+                <wheels baseConfig="CONTINENTAL_DEFAULT">
+                    <wheel filename="pneu/Michelin_520_85R42.xml" configId="duplaDentro">
+                        <additionalWheel filename="pneu/Michelin_520_85R42.xml" configId="duplaFora" offset="0.28" hasTireTracks="true" hasParticles="true"/>
+					</wheel>
+					<wheel filename="pneu/Michelin_520_85R42.xml" configId="duplaDentro">
+                        <additionalWheel filename="pneu/Michelin_520_85R42.xml" configId="duplaFora" offset="0.28" hasTireTracks="true" hasParticles="true"/>
+					</wheel>
+					<wheel filename="pneu/Michelin_650_65R34.xml"/>
+                    <wheel filename="pneu/Michelin_650_65R34.xml"/>
+                </wheels>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_configuration_valueTwinWheelsAll" price="500" brand="MICHELIN" saveId="MICHELIN_DUPLA2">
+                <wheels baseConfig="CONTINENTAL_DEFAULT">
+                    <wheel filename="pneu/Michelin_520_85R42.xml" configId="duplaDentro">
+                        <additionalWheel filename="pneu/Michelin_520_85R42.xml" configId="duplaFora" offset="0.28" hasTireTracks="true" hasParticles="true"/>
+					</wheel>
+					<wheel filename="pneu/Michelin_520_85R42.xml" configId="duplaDentro">
+                        <additionalWheel filename="pneu/Michelin_520_85R42.xml" configId="duplaFora" offset="0.28" hasTireTracks="true" hasParticles="true"/>
+					</wheel>
+					<wheel filename="pneu/Michelin_650_65R34.xml" configId="invertida"/>
+                    <wheel filename="pneu/Michelin_650_65R34.xml" configId="invertida"/>
+                </wheels>
+				<objectChange node="wheelBackLeft" translationActive="0.33 0 0"/>
+				<objectChange node="wheelBackRight" translationActive="-0.33 0 0"/>
+				<objectChange node="1>0|0|0|0" translationActive="-0.2 0 0"/>
+				<objectChange node="1>0|1|0|0" translationActive="0.2 0 0"/>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_transporte" price="0" brand="TRELLEBORG" saveId="TRELLEBORG_TRASNPORTE">
+                <wheels baseConfig="CONTINENTAL_DEFAULT">
+                    <wheel filename="pneu/Trelleborg_520_85R42.xml" configId="duplaDentro"/>
+                    <wheel filename="pneu/Trelleborg_520_85R42.xml" configId="duplaDentro"/>
+                    <wheel filename="pneu/Trelleborg_650_65R34.xml"/>
+                    <wheel filename="pneu/Trelleborg_650_65R34.xml"/>
+                </wheels>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_transporte" price="0" brand="TRELLEBORG" saveId="TRELLEBORG_TRASNPORTE2">
+                <wheels baseConfig="CONTINENTAL_DEFAULT">
+                    <wheel filename="pneu/Trelleborg_520_85R42.xml" configId="duplaDentro"/>
+                    <wheel filename="pneu/Trelleborg_520_85R42.xml" configId="duplaDentro"/>
+                    <wheel filename="pneu/Trelleborg_650_65R34.xml" configId="invertida"/>
+                    <wheel filename="pneu/Trelleborg_650_65R34.xml" configId="invertida"/>
+                </wheels>
+				<objectChange node="wheelBackLeft" translationActive="0.33 0 0"/>
+				<objectChange node="wheelBackRight" translationActive="-0.33 0 0"/>
+				<objectChange node="1>0|0|0|0" translationActive="-0.2 0 0"/>
+				<objectChange node="1>0|1|0|0" translationActive="0.2 0 0"/>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_configuration_valueTwinWheelsAll" price="500" brand="TRELLEBORG" saveId="TRELLEBORG_DEFAULT">
+                <wheels baseConfig="CONTINENTAL_DEFAULT">
+                    <wheel filename="pneu/Trelleborg_520_85R42.xml" configId="duplaDentro">
+                        <additionalWheel filename="pneu/Trelleborg_520_85R42.xml" configId="duplaFora" offset="0.28" hasTireTracks="true" hasParticles="true"/>
+					</wheel>
+					<wheel filename="pneu/Trelleborg_520_85R42.xml" configId="duplaDentro">
+                        <additionalWheel filename="pneu/Trelleborg_520_85R42.xml" configId="duplaFora" offset="0.28" hasTireTracks="true" hasParticles="true"/>
+					</wheel>
+					<wheel filename="pneu/Trelleborg_650_65R34.xml"/>
+                    <wheel filename="pneu/Trelleborg_650_65R34.xml"/>
+                </wheels>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_configuration_valueTwinWheelsAll" price="500" brand="TRELLEBORG" saveId="TRELLEBORG_DUPLA2">
+                <wheels baseConfig="CONTINENTAL_DEFAULT">
+                    <wheel filename="pneu/Trelleborg_520_85R42.xml" configId="duplaDentro">
+                        <additionalWheel filename="pneu/Trelleborg_520_85R42.xml" configId="duplaFora" offset="0.28" hasTireTracks="true" hasParticles="true"/>
+					</wheel>
+					<wheel filename="pneu/Trelleborg_520_85R42.xml" configId="duplaDentro">
+                        <additionalWheel filename="pneu/Trelleborg_520_85R42.xml" configId="duplaFora" offset="0.28" hasTireTracks="true" hasParticles="true"/>
+					</wheel>
+					<wheel filename="pneu/Trelleborg_650_65R34.xml" configId="invertida"/>
+                    <wheel filename="pneu/Trelleborg_650_65R34.xml" configId="invertida"/>
+                </wheels>
+				<objectChange node="wheelBackLeft" translationActive="0.33 0 0"/>
+				<objectChange node="wheelBackRight" translationActive="-0.33 0 0"/>
+				<objectChange node="1>0|0|0|0" translationActive="-0.2 0 0"/>
+				<objectChange node="1>0|1|0|0" translationActive="0.2 0 0"/>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_transporte" price="0" brand="MITAS" saveId="MITAS_TRASNPORTE">
+                <wheels baseConfig="CONTINENTAL_DEFAULT">
+                    <wheel filename="pneu/Mitas_520_85R42.xml" configId="duplaDentro"/>
+                    <wheel filename="pneu/Mitas_520_85R42.xml" configId="duplaDentro"/>
+                    <wheel filename="pneu/Mitas_650_65R34.xml"/>
+                    <wheel filename="pneu/Mitas_650_65R34.xml"/>
+                </wheels>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_transporte" price="0" brand="MITAS" saveId="MITAS_TRASNPORTE2">
+                <wheels baseConfig="CONTINENTAL_DEFAULT">
+                    <wheel filename="pneu/Mitas_520_85R42.xml" configId="duplaDentro"/>
+                    <wheel filename="pneu/Mitas_520_85R42.xml" configId="duplaDentro"/>
+                    <wheel filename="pneu/Mitas_650_65R34.xml" configId="invertida"/>
+                    <wheel filename="pneu/Mitas_650_65R34.xml" configId="invertida"/>
+                </wheels>
+				<objectChange node="wheelBackLeft" translationActive="0.33 0 0"/>
+				<objectChange node="wheelBackRight" translationActive="-0.33 0 0"/>
+				<objectChange node="1>0|0|0|0" translationActive="-0.2 0 0"/>
+				<objectChange node="1>0|1|0|0" translationActive="0.2 0 0"/>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_configuration_valueTwinWheelsAll" price="500" brand="MITAS" saveId="MITAS_DEFAULT">
+                <wheels baseConfig="CONTINENTAL_DEFAULT">
+                    <wheel filename="pneu/Mitas_520_85R42.xml" configId="duplaDentro">
+                        <additionalWheel filename="pneu/Mitas_520_85R42.xml" configId="duplaFora" offset="0.28" hasTireTracks="true" hasParticles="true"/>
+					</wheel>
+					<wheel filename="pneu/Mitas_520_85R42.xml" configId="duplaDentro">
+                        <additionalWheel filename="pneu/Mitas_520_85R42.xml" configId="duplaFora" offset="0.28" hasTireTracks="true" hasParticles="true"/>
+					</wheel>
+					<wheel filename="pneu/Mitas_650_65R34.xml"/>
+                    <wheel filename="pneu/Mitas_650_65R34.xml"/>
+                </wheels>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_configuration_valueTwinWheelsAll" price="500" brand="MITAS" saveId="MITAS_DUPLA2">
+                <wheels baseConfig="CONTINENTAL_DEFAULT">
+                    <wheel filename="pneu/Mitas_520_85R42.xml" configId="duplaDentro">
+                        <additionalWheel filename="pneu/Mitas_520_85R42.xml" configId="duplaFora" offset="0.28" hasTireTracks="true" hasParticles="true"/>
+					</wheel>
+					<wheel filename="pneu/Mitas_520_85R42.xml" configId="duplaDentro">
+                        <additionalWheel filename="pneu/Mitas_520_85R42.xml" configId="duplaFora" offset="0.28" hasTireTracks="true" hasParticles="true"/>
+					</wheel>
+					<wheel filename="pneu/Mitas_650_65R34.xml" configId="invertida"/>
+                    <wheel filename="pneu/Mitas_650_65R34.xml" configId="invertida"/>
+                </wheels>
+				<objectChange node="wheelBackLeft" translationActive="0.33 0 0"/>
+				<objectChange node="wheelBackRight" translationActive="-0.33 0 0"/>
+				<objectChange node="1>0|0|0|0" translationActive="-0.2 0 0"/>
+				<objectChange node="1>0|1|0|0" translationActive="0.2 0 0"/>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_transporte" price="0" brand="BKT" saveId="BKT_TRASNPORTE">
+                <wheels baseConfig="CONTINENTAL_DEFAULT">
+                    <wheel filename="pneu/BKT_520_85R42.xml" configId="duplaDentro"/>
+                    <wheel filename="pneu/BKT_520_85R42.xml" configId="duplaDentro"/>
+                    <wheel filename="pneu/BKT_650_65R34.xml"/>
+                    <wheel filename="pneu/BKT_650_65R34.xml"/>
+                </wheels>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_transporte" price="0" brand="BKT" saveId="BKT_TRASNPORTE2">
+                <wheels baseConfig="CONTINENTAL_DEFAULT">
+                    <wheel filename="pneu/BKT_520_85R42.xml" configId="duplaDentro"/>
+                    <wheel filename="pneu/BKT_520_85R42.xml" configId="duplaDentro"/>
+                    <wheel filename="pneu/BKT_650_65R34.xml" configId="invertida"/>
+                    <wheel filename="pneu/BKT_650_65R34.xml" configId="invertida"/>
+                </wheels>
+				<objectChange node="wheelBackLeft" translationActive="0.33 0 0"/>
+				<objectChange node="wheelBackRight" translationActive="-0.33 0 0"/>
+				<objectChange node="1>0|0|0|0" translationActive="-0.2 0 0"/>
+				<objectChange node="1>0|1|0|0" translationActive="0.2 0 0"/>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_configuration_valueTwinWheelsAll" price="500" brand="BKT" saveId="BKT_DEFAULT">
+                <wheels baseConfig="CONTINENTAL_DEFAULT">
+                    <wheel filename="pneu/BKT_520_85R42.xml" configId="duplaDentro">
+                        <additionalWheel filename="pneu/BKT_520_85R42.xml" configId="duplaFora" offset="0.28" hasTireTracks="true" hasParticles="true"/>
+					</wheel>
+					<wheel filename="pneu/BKT_520_85R42.xml" configId="duplaDentro">
+                        <additionalWheel filename="pneu/BKT_520_85R42.xml" configId="duplaFora" offset="0.28" hasTireTracks="true" hasParticles="true"/>
+					</wheel>
+					<wheel filename="pneu/BKT_650_65R34.xml"/>
+                    <wheel filename="pneu/BKT_650_65R34.xml"/>
+                </wheels>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_configuration_valueTwinWheelsAll" price="500" brand="BKT" saveId="BKT_DUPLA2">
+                <wheels baseConfig="CONTINENTAL_DEFAULT">
+                    <wheel filename="pneu/BKT_520_85R42.xml" configId="duplaDentro">
+                        <additionalWheel filename="pneu/BKT_520_85R42.xml" configId="duplaFora" offset="0.28" hasTireTracks="true" hasParticles="true"/>
+					</wheel>
+					<wheel filename="pneu/BKT_520_85R42.xml" configId="duplaDentro">
+                        <additionalWheel filename="pneu/BKT_520_85R42.xml" configId="duplaFora" offset="0.28" hasTireTracks="true" hasParticles="true"/>
+					</wheel>
+					<wheel filename="pneu/BKT_650_65R34.xml" configId="invertida"/>
+                    <wheel filename="pneu/BKT_650_65R34.xml" configId="invertida"/>
+                </wheels>
+				<objectChange node="wheelBackLeft" translationActive="0.33 0 0"/>
+				<objectChange node="wheelBackRight" translationActive="-0.33 0 0"/>
+				<objectChange node="1>0|0|0|0" translationActive="-0.2 0 0"/>
+				<objectChange node="1>0|1|0|0" translationActive="0.2 0 0"/>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_transporte" price="0" brand="VREDESTEIN" saveId="VREDESTEIN_TRASNPORTE">
+                <wheels baseConfig="CONTINENTAL_DEFAULT">
+                    <wheel filename="pneu/Vredestein_520_85R42.xml" configId="duplaDentro"/>
+                    <wheel filename="pneu/Vredestein_520_85R42.xml" configId="duplaDentro"/>
+                    <wheel filename="pneu/Vredestein_650_65R34.xml"/>
+                    <wheel filename="pneu/Vredestein_650_65R34.xml"/>
+                </wheels>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_transporte" price="0" brand="VREDESTEIN" saveId="VREDESTEIN_TRASNPORTE2">
+                <wheels baseConfig="CONTINENTAL_DEFAULT">
+                    <wheel filename="pneu/Vredestein_520_85R42.xml" configId="duplaDentro"/>
+                    <wheel filename="pneu/Vredestein_520_85R42.xml" configId="duplaDentro"/>
+                    <wheel filename="pneu/Vredestein_650_65R34.xml" configId="invertida"/>
+                    <wheel filename="pneu/Vredestein_650_65R34.xml" configId="invertida"/>
+                </wheels>
+				<objectChange node="wheelBackLeft" translationActive="0.33 0 0"/>
+				<objectChange node="wheelBackRight" translationActive="-0.33 0 0"/>
+				<objectChange node="1>0|0|0|0" translationActive="-0.2 0 0"/>
+				<objectChange node="1>0|1|0|0" translationActive="0.2 0 0"/>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_configuration_valueTwinWheelsAll" price="500" brand="VREDESTEIN" saveId="VREDESTEIN_DEFAULT">
+                <wheels baseConfig="CONTINENTAL_DEFAULT">
+                    <wheel filename="pneu/Vredestein_520_85R42.xml" configId="duplaDentro">
+                        <additionalWheel filename="pneu/Vredestein_520_85R42.xml" configId="duplaFora" offset="0.28" hasTireTracks="true" hasParticles="true"/>
+					</wheel>
+					<wheel filename="pneu/Vredestein_520_85R42.xml" configId="duplaDentro">
+                        <additionalWheel filename="pneu/Vredestein_520_85R42.xml" configId="duplaFora" offset="0.28" hasTireTracks="true" hasParticles="true"/>
+					</wheel>
+					<wheel filename="pneu/Vredestein_650_65R34.xml"/>
+                    <wheel filename="pneu/Vredestein_650_65R34.xml"/>
+                </wheels>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_configuration_valueTwinWheelsAll" price="500" brand="VREDESTEIN" saveId="VREDESTEIN_DUPLA2">
+                <wheels baseConfig="CONTINENTAL_DEFAULT">
+                    <wheel filename="pneu/Vredestein_520_85R42.xml" configId="duplaDentro">
+                        <additionalWheel filename="pneu/Vredestein_520_85R42.xml" configId="duplaFora" offset="0.28" hasTireTracks="true" hasParticles="true"/>
+					</wheel>
+					<wheel filename="pneu/Vredestein_520_85R42.xml" configId="duplaDentro">
+                        <additionalWheel filename="pneu/Vredestein_520_85R42.xml" configId="duplaFora" offset="0.28" hasTireTracks="true" hasParticles="true"/>
+					</wheel>
+					<wheel filename="pneu/Vredestein_650_65R34.xml" configId="invertida"/>
+                    <wheel filename="pneu/Vredestein_650_65R34.xml" configId="invertida"/>
+                </wheels>
+				<objectChange node="wheelBackLeft" translationActive="0.33 0 0"/>
+				<objectChange node="wheelBackRight" translationActive="-0.33 0 0"/>
+				<objectChange node="1>0|0|0|0" translationActive="-0.2 0 0"/>
+				<objectChange node="1>0|1|0|0" translationActive="0.2 0 0"/>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_configuration_valueCrawler" price="20000" brand="CONTINENTAL" saveId="CONTINENTAL_CRAWLER">
+                <wheels autoRotateBackSpeed="2.2" differentialIndex="2" ackermannSteeringIndex="2">
+                    <wheel hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" rotSpeed="1"  restLoad="2.6" repr="0>0|0|4" driveNode="0>0|0|4|0"   radius="0.35" width="0.612" mass="0.2" frictionScale="2" tireType="crawler" initialCompression="25" suspTravel="0.15" spring="65" damper="65" yOffset="-0.018"/>
+                        <tire tireTrackAtlasIndex="7" isCareWheel="false"/>
+                    </wheel>
+                    <wheel>
+                        <physics tipOcclusionAreaGroupId="1" rotSpeed="1"  restLoad="1.5" repr="0>0|0|3"                                          radius="0.35" width="0.612" mass="0.2" frictionScale="2" tireType="crawler" initialCompression="12" suspTravel="0.15" spring="65" damper="65" brakeFactor="0.5" yOffset="-0.025" />
+                        <tire isCareWheel="false" />
+                    </wheel>
+                    <wheel hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" rotSpeed="1"  restLoad="2.6" repr="0>0|0|6" driveNode="0>0|0|6|0" radius="0.35" width="0.612" mass="0.2" frictionScale="2" tireType="crawler" initialCompression="25" suspTravel="0.15" spring="65" damper="65" yOffset="-0.018"/>
+                        <tire tireTrackAtlasIndex="7" isCareWheel="false"/>
+                    </wheel>
+                    <wheel>
+                        <physics tipOcclusionAreaGroupId="1" rotSpeed="1"  restLoad="1.5" repr="0>0|0|5"                                         radius="0.35" width="0.612" mass="0.2" frictionScale="2" tireType="crawler" initialCompression="12" suspTravel="0.15" spring="65" damper="65" brakeFactor="0.5" yOffset="-0.025" />
+                        <tire isCareWheel="false" />
+                    </wheel>
+                    <wheel filename="pneu/Continental_650_65R34.xml" isLeft="true" hasTireTracks="true" hasParticles="true" >
+                        <physics tipOcclusionAreaGroupId="1" rotSpeed="-1" restLoad="6.2" repr="axisBackLeft"  driveNode="wheelBackLeft"  forcePointRatio="0.5" frictionScale="2" initialCompression="35" suspTravel="0.22" spring="77" damper="100"/>
+                        <steering node="steeringBar" nodeMinTransX="0.12" nodeMaxTransX="-0.12" />
+					</wheel>
+                    <wheel filename="pneu/Continental_650_65R34.xml" isLeft="false" hasTireTracks="true" hasParticles="true" >
+                        <physics tipOcclusionAreaGroupId="1" rotSpeed="-1" restLoad="6.2" repr="axisBackRight" driveNode="wheelBackRight" forcePointRatio="0.5" frictionScale="2" initialCompression="35" suspTravel="0.22" spring="77" damper="100"/>
+					</wheel>
+                </wheels>
+                <crawlers>
+                    <crawler filename="$data/shared/crawlers/johnDeere/x9_1100Crawler/x9_1100Crawler_us.xml" linkNode="0>0|0|4|1"  wheelIndices="1 2" isLeft="true" trackWidth="1"/>
+                    <crawler filename="$data/shared/crawlers/johnDeere/x9_1100Crawler/x9_1100Crawler_us.xml" linkNode="0>0|0|6|1" wheelIndices="3 4" isLeft="false" trackWidth="1"/>
+                </crawlers>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_configuration_valueCrawler" price="20000" brand="CONTINENTAL" saveId="CONTINENTAL_CRAWLER2">
+                <wheels baseConfig="CONTINENTAL_CRAWLER">
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel configId="invertida"/>
+                    <wheel configId="invertida"/>
+                </wheels>
+                <crawlers>
+                    <crawler filename="$data/shared/crawlers/johnDeere/x9_1100Crawler/x9_1100Crawler_us.xml" linkNode="0>0|0|4|1"  wheelIndices="1 2" isLeft="true" trackWidth="1"/>
+                    <crawler filename="$data/shared/crawlers/johnDeere/x9_1100Crawler/x9_1100Crawler_us.xml" linkNode="0>0|0|6|1" wheelIndices="3 4" isLeft="false" trackWidth="1"/>
+                </crawlers>
+				<objectChange node="wheelBackLeft" translationActive="0.33 0 0"/>
+				<objectChange node="wheelBackRight" translationActive="-0.33 0 0"/>
+				<objectChange node="1>0|0|0|0" translationActive="-0.2 0 0"/>
+				<objectChange node="1>0|1|0|0" translationActive="0.2 0 0"/>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_configuration_valueCrawler" price="10000" brand="MICHELIN" saveId="MICHELIN_CRAWLER">
+                <wheels baseConfig="CONTINENTAL_CRAWLER">
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel filename="pneu/Michelin_650_65R34.xml"/>
+                    <wheel filename="pneu/Michelin_650_65R34.xml"/>
+                </wheels>
+                <crawlers>
+                    <crawler filename="$data/shared/crawlers/johnDeere/x9_1100Crawler/x9_1100Crawler_us.xml" linkNode="0>0|0|4|1"  wheelIndices="1 2" isLeft="true" trackWidth="1"/>
+                    <crawler filename="$data/shared/crawlers/johnDeere/x9_1100Crawler/x9_1100Crawler_us.xml" linkNode="0>0|0|6|1" wheelIndices="3 4" isLeft="false" trackWidth="1"/>
+                </crawlers>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_configuration_valueCrawler" price="10000" brand="MICHELIN" saveId="MICHELIN_CRAWLER2">
+                <wheels baseConfig="CONTINENTAL_CRAWLER">
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel filename="pneu/Michelin_650_65R34.xml" configId="invertida"/>
+                    <wheel filename="pneu/Michelin_650_65R34.xml" configId="invertida"/>
+                </wheels>
+                <crawlers>
+                    <crawler filename="$data/shared/crawlers/johnDeere/x9_1100Crawler/x9_1100Crawler_us.xml" linkNode="0>0|0|4|1"  wheelIndices="1 2" isLeft="true" trackWidth="1"/>
+                    <crawler filename="$data/shared/crawlers/johnDeere/x9_1100Crawler/x9_1100Crawler_us.xml" linkNode="0>0|0|6|1" wheelIndices="3 4" isLeft="false" trackWidth="1"/>
+                </crawlers>
+				<objectChange node="wheelBackLeft" translationActive="0.33 0 0"/>
+				<objectChange node="wheelBackRight" translationActive="-0.33 0 0"/>
+				<objectChange node="1>0|0|0|0" translationActive="-0.2 0 0"/>
+				<objectChange node="1>0|1|0|0" translationActive="0.2 0 0"/>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_configuration_valueCrawler" price="10000" brand="TRELLEBORG" saveId="TRELLEBORG_CRAWLER">
+                <wheels baseConfig="CONTINENTAL_CRAWLER">
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel filename="pneu/Trelleborg_650_65R34.xml"/>
+                    <wheel filename="pneu/Trelleborg_650_65R34.xml"/>
+                </wheels>
+                <crawlers>
+                    <crawler filename="$data/shared/crawlers/johnDeere/x9_1100Crawler/x9_1100Crawler_us.xml" linkNode="0>0|0|4|1"  wheelIndices="1 2" isLeft="true" trackWidth="1"/>
+                    <crawler filename="$data/shared/crawlers/johnDeere/x9_1100Crawler/x9_1100Crawler_us.xml" linkNode="0>0|0|6|1" wheelIndices="3 4" isLeft="false" trackWidth="1"/>
+                </crawlers>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_configuration_valueCrawler" price="10000" brand="TRELLEBORG" saveId="TRELLEBORG_CRAWLER2">
+                <wheels baseConfig="CONTINENTAL_CRAWLER">
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel filename="pneu/Trelleborg_650_65R34.xml" configId="invertida"/>
+                    <wheel filename="pneu/Trelleborg_650_65R34.xml" configId="invertida"/>
+                </wheels>
+                <crawlers>
+                    <crawler filename="$data/shared/crawlers/johnDeere/x9_1100Crawler/x9_1100Crawler_us.xml" linkNode="0>0|0|4|1"  wheelIndices="1 2" isLeft="true" trackWidth="1"/>
+                    <crawler filename="$data/shared/crawlers/johnDeere/x9_1100Crawler/x9_1100Crawler_us.xml" linkNode="0>0|0|6|1" wheelIndices="3 4" isLeft="false" trackWidth="1"/>
+                </crawlers>
+				<objectChange node="wheelBackLeft" translationActive="0.33 0 0"/>
+				<objectChange node="wheelBackRight" translationActive="-0.33 0 0"/>
+				<objectChange node="1>0|0|0|0" translationActive="-0.2 0 0"/>
+				<objectChange node="1>0|1|0|0" translationActive="0.2 0 0"/>
+            </wheelConfiguration> 
+			<wheelConfiguration name="$l10n_configuration_valueCrawler" price="10000" brand="MITAS" saveId="MITAS_CRAWLER">
+                <wheels baseConfig="CONTINENTAL_CRAWLER">
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel filename="pneu/Mitas_650_65R34.xml"/>
+                    <wheel filename="pneu/Mitas_650_65R34.xml"/>
+                </wheels>
+                <crawlers>
+                    <crawler filename="$data/shared/crawlers/johnDeere/x9_1100Crawler/x9_1100Crawler_us.xml" linkNode="0>0|0|4|1"  wheelIndices="1 2" isLeft="true" trackWidth="1"/>
+                    <crawler filename="$data/shared/crawlers/johnDeere/x9_1100Crawler/x9_1100Crawler_us.xml" linkNode="0>0|0|6|1" wheelIndices="3 4" isLeft="false" trackWidth="1"/>
+                </crawlers>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_configuration_valueCrawler" price="10000" brand="MITAS" saveId="MITAS_CRAWLER2">
+                <wheels baseConfig="CONTINENTAL_CRAWLER">
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel filename="pneu/Mitas_650_65R34.xml" configId="invertida"/>
+                    <wheel filename="pneu/Mitas_650_65R34.xml" configId="invertida"/>
+                </wheels>
+                <crawlers>
+                    <crawler filename="$data/shared/crawlers/johnDeere/x9_1100Crawler/x9_1100Crawler_us.xml" linkNode="0>0|0|4|1"  wheelIndices="1 2" isLeft="true" trackWidth="1"/>
+                    <crawler filename="$data/shared/crawlers/johnDeere/x9_1100Crawler/x9_1100Crawler_us.xml" linkNode="0>0|0|6|1" wheelIndices="3 4" isLeft="false" trackWidth="1"/>
+                </crawlers>
+				<objectChange node="wheelBackLeft" translationActive="0.33 0 0"/>
+				<objectChange node="wheelBackRight" translationActive="-0.33 0 0"/>
+				<objectChange node="1>0|0|0|0" translationActive="-0.2 0 0"/>
+				<objectChange node="1>0|1|0|0" translationActive="0.2 0 0"/>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_configuration_valueCrawler" price="10000" brand="VREDESTEIN" saveId="VREDESTEIN_CRAWLER">
+                <wheels baseConfig="CONTINENTAL_CRAWLER">
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel filename="pneu/Vredestein_650_65R34.xml"/>
+                    <wheel filename="pneu/Vredestein_650_65R34.xml"/>
+                </wheels>
+                <crawlers>
+                    <crawler filename="$data/shared/crawlers/johnDeere/x9_1100Crawler/x9_1100Crawler_us.xml" linkNode="0>0|0|4|1"  wheelIndices="1 2" isLeft="true" trackWidth="1"/>
+                    <crawler filename="$data/shared/crawlers/johnDeere/x9_1100Crawler/x9_1100Crawler_us.xml" linkNode="0>0|0|6|1" wheelIndices="3 4" isLeft="false" trackWidth="1"/>
+                </crawlers>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_configuration_valueCrawler" price="10000" brand="VREDESTEIN" saveId="VREDESTEIN_CRAWLER2">
+                <wheels baseConfig="CONTINENTAL_CRAWLER">
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel filename="pneu/Vredestein_650_65R34.xml" configId="invertida"/>
+                    <wheel filename="pneu/Vredestein_650_65R34.xml" configId="invertida"/>
+                </wheels>
+                <crawlers>
+                    <crawler filename="$data/shared/crawlers/johnDeere/x9_1100Crawler/x9_1100Crawler_us.xml" linkNode="0>0|0|4|1"  wheelIndices="1 2" isLeft="true" trackWidth="1"/>
+                    <crawler filename="$data/shared/crawlers/johnDeere/x9_1100Crawler/x9_1100Crawler_us.xml" linkNode="0>0|0|6|1" wheelIndices="3 4" isLeft="false" trackWidth="1"/>
+                </crawlers>
+				<objectChange node="wheelBackLeft" translationActive="0.33 0 0"/>
+				<objectChange node="wheelBackRight" translationActive="-0.33 0 0"/>
+				<objectChange node="1>0|0|0|0" translationActive="-0.2 0 0"/>
+				<objectChange node="1>0|1|0|0" translationActive="0.2 0 0"/>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_configuration_valueCrawler" price="10000" brand="BKT" saveId="BKT_CRAWLER">
+                <wheels baseConfig="CONTINENTAL_CRAWLER">
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel filename="pneu/BKT_650_65R34.xml"/>
+                    <wheel filename="pneu/BKT_650_65R34.xml"/>
+                </wheels>
+                <crawlers>
+                    <crawler filename="$data/shared/crawlers/johnDeere/x9_1100Crawler/x9_1100Crawler_us.xml" linkNode="0>0|0|4|1"  wheelIndices="1 2" isLeft="true" trackWidth="1"/>
+                    <crawler filename="$data/shared/crawlers/johnDeere/x9_1100Crawler/x9_1100Crawler_us.xml" linkNode="0>0|0|6|1" wheelIndices="3 4" isLeft="false" trackWidth="1"/>
+                </crawlers>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_configuration_valueCrawler" price="10000" brand="BKT" saveId="BKT_CRAWLER2">
+                <wheels baseConfig="CONTINENTAL_CRAWLER">
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel filename="pneu/BKT_650_65R34.xml" configId="invertida"/>
+                    <wheel filename="pneu/BKT_650_65R34.xml" configId="invertida"/>
+                </wheels>
+                <crawlers>
+                    <crawler filename="$data/shared/crawlers/johnDeere/x9_1100Crawler/x9_1100Crawler_us.xml" linkNode="0>0|0|4|1"  wheelIndices="1 2" isLeft="true" trackWidth="1"/>
+                    <crawler filename="$data/shared/crawlers/johnDeere/x9_1100Crawler/x9_1100Crawler_us.xml" linkNode="0>0|0|6|1" wheelIndices="3 4" isLeft="false" trackWidth="1"/>
+                </crawlers>
+				<objectChange node="wheelBackLeft" translationActive="0.33 0 0"/>
+				<objectChange node="wheelBackRight" translationActive="-0.33 0 0"/>
+				<objectChange node="1>0|0|0|0" translationActive="-0.2 0 0"/>
+				<objectChange node="1>0|1|0|0" translationActive="0.2 0 0"/>
+            </wheelConfiguration>
+        </wheelConfigurations>
+
+        <ackermannSteeringConfigurations>
+            <ackermannSteering rotSpeed="35" rotMax="65" rotCenter="0 3.0" rotCenterWheel1="1" rotCenterWheel2="2" />
+            <ackermannSteering rotSpeed="35" rotMax="65" rotCenter="0 3.0" rotCenterWheel1="1" rotCenterWheel2="3" />
+        </ackermannSteeringConfigurations>
+
+        <rimColor>JOHNDEERE_YELLOW1</rimColor>
+
+        <hubs>
+            <color0>JOHNDEERE_YELLOW1</color0>
+            <color1>SHARED_GREY3</color1>
+            <hub linkNode="1>0|0|0|0" filename="$data/shared/wheels/hubs/hub_n10_12.xml" isLeft="true"  scale="0.33 0.40 0.40" offset="0.1"/>
+            <hub linkNode="1>0|1|0|0" filename="$data/shared/wheels/hubs/hub_n10_12.xml" isLeft="false" scale="0.33 0.40 0.40" offset="0.1"/>
+        </hubs>
+    </wheels>
+
+    <lights>
+        <sharedLight linkNode="bigTriangle01" filename="$data/shared/assets/reflectors/lizard/bigTriangle.xml"/>
+        <sharedLight linkNode="bigTriangle02" filename="$data/shared/assets/reflectors/lizard/bigTriangle.xml"/>
+        <states>
+            <state lightTypes="0" />
+            <state lightTypes="0 1" />
+            <state lightTypes="0 1 2" />
+            <state lightTypes="0 1 2 3" />
+        </states>
+
+        <realLights>
+            <low>
+                <light node="0>0|2|0|0"     lightTypes="0"/>
+                <light node="0>0|8|2|6|1|0"  lightTypes="1"/>
+                <light node="0>0|10|2|0|2" lightTypes="2"/>
+                <light node="0>0|10|2|1|1" lightTypes="2"/>
+                <light node="backLightsHigh"     lightTypes="0"/>
+                <light node="0>0|2|0|1"     lightTypes="3"/>
+                <brakeLight node="backLightsHigh" />
+                <turnLightLeft node="turnLightLeftBack" />
+                <turnLightRight node="turnLightRightBack" />
+            </low>
+            <high>
+                <light node="0>0|2|0|0"     lightTypes="0"/>
+                <light node="0>0|8|2|6|1|0"  lightTypes="1"/>
+                <light node="0>0|10|2|0|2" lightTypes="2"/>
+				<light node="0>0|10|2|1|1" lightTypes="2"/>
+                <light node="backLightsHigh"     lightTypes="0"/>
+				<light node="0>0|2|0|1"     lightTypes="3"/>
+                <brakeLight node="backLightsHigh" />
+                <turnLightLeft node="turnLightLeftBack" />
+                <turnLightRight node="turnLightRightBack" />
+            </high>
+        </realLights>
+
+        <defaultLights>
+            <defaultLight shaderNode="0>0|2|1|0"  lightTypes="0"/>
+            <defaultLight shaderNode="0>0|10|2|0|3"  lightTypes="2"/>
+            <defaultLight shaderNode="0>0|10|2|1|2"  lightTypes="2"/>
+            <defaultLight shaderNode="0>0|2|1|1"  lightTypes="3" intensity="15"/>
+            <defaultLight shaderNode="workLightsBackStatic01"  lightTypes="1" intensity="45" />
+            <defaultLight shaderNode="workLightsBackStatic02"  lightTypes="1" intensity="45" />
+            <defaultLight shaderNode="workLightBackStatic"     lightTypes="1" intensity="45" />
+            <defaultLight shaderNode="lightsBackStatic"        lightTypes="0" intensity="45" />
+			
+        </defaultLights>
+
+        <turnLights>
+            <turnLightLeft shaderNode="turnLightLeft03" />
+            <turnLightRight shaderNode="turnLightRight03" />
+        </turnLights>
+
+        <brakeLights>
+            <brakeLight shaderNode="lightsBackStatic" />
+        </brakeLights>
+
+        <dashboards>
+            <dashboard displayType="emitter" valueType="turnLightLeft"   node="0>0|4|4|2"  baseColor="BLACK" emitColor="GREEN" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="emitter" valueType="turnLightRight"  node="0>0|4|4|3" baseColor="BLACK" emitColor="GREEN" groups="MOTOR_ACTIVE"/>
+			<dashboard displayType="ROT" valueType="turnLight"  node="0>0|4|0|1|0" rotAxis="2" minRot="10" maxRot="-10" doInterpolation="true" groups="MOTOR_ACTIVE"/>
+        </dashboards>
+		
+		<beaconLights>
+            <beaconLight node="beaconLight01" filename="$data/shared/assets/beaconLights/lizard/beaconLight07.xml" />
+            <beaconLight node="beaconLight02" filename="$data/shared/assets/beaconLights/lizard/beaconLight07.xml" />
+            <beaconLight node="beaconLight03" filename="$data/shared/assets/beaconLights/lizard/beaconLight07.xml" />
+        </beaconLights>
+    </lights>
+
+    <enterable isTabbable="true" >
+        <enterReferenceNode node="cp690_main_component1" />
+        <exitPoint node="exitPoint" />
+
+        <cameras>
+            <camera node="outdoorCamera" rotatable="true" rotateNode="outdoorCameraTarget" limit="true" useWorldXZRotation="true" rotMinX="-1.4" rotMaxX="1" transMin="7.5" transMax="40" translation="0 0 12.5" rotation="-25 180 0">
+                <raycastNode node="cameraRaycastNode1"/>
+                <raycastNode node="cameraRaycastNode2"/>
+                <raycastNode node="cameraRaycastNode3"/>
+                <raycastNode node="cameraRaycastNode4"/>
+            </camera>
+            <camera node="indoorCamera" rotation="-22 180 0" rotatable="true" limit="true" rotMinX="-1.1" rotMaxX="0.4" transMin="0" transMax="0" useMirror="true" isInside="true" shadowFocusBox="shadowFocusBox" suspensionNodeIndex="1"/>
+        </cameras>
+
+        <characterNode node="0>0|4|1|0|0|0" cameraMinDistance="0.5" spineRotation="-90 0 90" >
+            <target ikChain="rightFoot" targetNode="0>0|4|6|0" />
+            <target ikChain="leftFoot"  targetNode="0>0|4|6|1" />
+            <target ikChain="rightArm"  targetNode="0>0|4|1|0|0|2|0" poseId="wideFingers"/>
+            <target ikChain="leftArm"   targetNode="0>0|4|0|0|0|0" />
+        </characterNode>
+		
+		<passengerSeats>
+            <passengerSeat node="0>0|4|7" exitPoint="0>0|4|7|6" outdoorCameraIndex="1">
+                <camera node="0>0|4|7|0" rotatable="true" limit="true" rotMinX="-1.1" rotMaxX="0.4" transMin="0" transMax="0" useMirror="true" isInside="true" useOutdoorSounds="true" positionSmoothingParameter="0" shadowFocusBox="shadowFocusBox"/>
+                <characterNode node="0>0|4|7|1" cameraMinDistance="0.5" spineRotation="-90 0 90">
+                    <target ikChain="leftArm"   targetNode="0>0|4|7|5" poseId="flatFingers"/>
+                    <target ikChain="rightArm"  targetNode="0>0|4|7|4" poseId="flatFingers"/>
+                    <target ikChain="leftFoot"  targetNode="0>0|4|7|2" />
+                    <target ikChain="rightFoot" targetNode="0>0|4|7|3" />
+                </characterNode>
+            </passengerSeat>
+        </passengerSeats>
+		
+		<characterTargetNodeModifier node="0>0|4|6|0" transitionTime="0.1" >
+            <state node="0>0|4|3|1|0" referenceNode="0>0|4|3|1" />
+        </characterTargetNodeModifier>
+		
+		<characterTargetNodeModifier node="0>0|4|1|0|0|2|0" transitionTime="0.4" >
+            <state node="0>0|4|0|2|0|0|0" referenceNode="0>0|4|0|2|0|0" />
+        </characterTargetNodeModifier>
+		
+		<characterTargetNodeModifier node="0>0|4|1|0|0|0" transitionTime="0.3" >
+            <state node="0>0|4|1|0|0|1" referenceNode="0>0|4|0|2|0|0" />
+        </characterTargetNodeModifier>
+		
+		<dashboards>
+            <dashboard displayType="NUMBER" valueType="operatingTime" numbers="0>0|4|4|5|1" numberColor="0.03 0.03 0.03 1" precision="2" emissiveScale="1" groups="MOTOR_ACTIVE"/>
+        </dashboards>
+		
+		<mirrors>
+            <mirror node="0>0|9|0|1"    prio="1" />
+            <mirror node="0>0|9|1|1"    prio="1" />
+            <mirror node="0>0|9|2|1"    prio="1" />
+            <mirror node="0>0|9|3|1"    prio="1" />
+            <mirror node="0>0|9|4|1"    prio="1" />
+            <mirror node="0>0|9|5|1"    prio="1" />
+        </mirrors>
+    </enterable>
+
+    <motorized>
+        <consumerConfigurations>
+            <consumerConfiguration>
+                <consumer fillUnitIndex="3" usage="236" fillType="diesel" />  <!-- usage is per hour at max load and max rpm -->
+                <consumer fillUnitIndex="4" usage="8.5" fillType="def" />     <!-- usage is per hour at max load and max rpm -->
+            </consumerConfiguration>
+        </consumerConfigurations>
+
+       <differentialConfigurations>
+            <differentialConfiguration>
+                <differentials>
+                    <differential torqueRatio="0.5" maxSpeedRatio="2.4" wheelIndex1="1" wheelIndex2="2" />
+                    <differential torqueRatio="0.5" maxSpeedRatio="1.5" wheelIndex1="3" wheelIndex2="4" />
+                    <differential torqueRatio="0.5" maxSpeedRatio="2.0" differentialIndex1="1" differentialIndex2="2" /> <!-- front-back -->
+                </differentials>
+            </differentialConfiguration>
+			
+			<differentialConfiguration>
+                <differentials>
+                  <differential torqueRatio="0.5" maxSpeedRatio="1.3" wheelIndex1="1" wheelIndex2="2" />
+                  <differential torqueRatio="0.5" maxSpeedRatio="1.3" wheelIndex1="3" wheelIndex2="4" />
+                  <differential torqueRatio="0.5" maxSpeedRatio="2.0" differentialIndex1="1" differentialIndex2="2" /> <!-- front left-right -->
+                  <differential torqueRatio="0.5" maxSpeedRatio="1.7" wheelIndex1="5" wheelIndex2="6" /> <!-- back left-right -->
+                  <differential torqueRatio="0.5" maxSpeedRatio="1.3" differentialIndex1="3" differentialIndex2="4" /> <!-- front-back -->
+                </differentials>
+            </differentialConfiguration>
+        </differentialConfigurations>
+
+        <motorConfigurations>
+            <motorConfiguration name="CS690" hp="550" price="0">
+                <motor torqueScale="2.22" minRpm="850" maxRpm="2200" maxForwardSpeed="32" maxBackwardSpeed="15" brakeForce="15" lowBrakeForceScale="0.22" accelerationLimit="1.6" dampingRateScale="2.5" startAnimationName="barragps">
+                    <torque normRpm="0.45" torque="0.9"/>
+                    <torque normRpm="0.5" torque="0.97"/>
+                    <torque normRpm="0.59" torque="1"/>
+                    <torque normRpm="0.72" torque="1"/>
+                    <torque normRpm="0.86" torque="0.88"/>
+                    <torque normRpm="1" torque="0.72"/>
+                </motor>
+                <transmission minForwardGearRatio="22" maxForwardGearRatio="300" minBackwardGearRatio="47.5" maxBackwardGearRatio="300" name="$l10n_info_transmission_cvt"/>
+            </motorConfiguration>
+        </motorConfigurations>
+
+        <exhaustEffects>
+            <exhaustEffect node="exhaustParticle" filename="$data/effects/exhaust/exhaust.i3d" minRpmColor="0.9 0.9 0.9 0.1" maxRpmColor="0.9 0.9 0.9 0.4" minRpmScale="0.05" maxRpmScale="0.5" />
+        </exhaustEffects>
+
+        <brakeCompressor capacity="2000" fillSpeed="200" />
+        <motorStartDuration>3600</motorStartDuration>
+
+        <animationNodes>
+            <animationNode node="airFilterCleaner" rotAxis="1" rotSpeed="600" turnOnFadeTime="4" turnOffFadeTime="3"/>
+        </animationNodes>
+
+        <dashboards>
+            <dashboard displayType="ANIMATION"   valueType="speedDir" animName="joystickMovement" groups="MOTOR_ACTIVE"/>
+			<dashboard displayType="NUMBER" valueType="rpm"   numbers="0>0|4|4|1|1"  numberColor="0.95 0.95 0.95 1" precision="0" emissiveScale="1" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="NUMBER" valueType="speed" numbers="0>0|4|4|1|0" numberColor="0.95 0.95 0.95 1" precision="1" emissiveScale="1" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="ANIMATION" valueType="motorTemperature" animName="loadingBarTemperature" minValueAnim="20" maxValueAnim="120" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="NUMBER" valueType="fuelUsage" numbers="0>0|4|4|5|0" numberColor="0.03 0.03 0.03 1" precision="1" emissiveScale="1" groups="MOTOR_ACTIVE"/>
+		    <dashboard displayType="MULTI_STATE" valueType="ignitionState" node="0>0|4|0|2|0" doInterpolation="true" groups="MOTOR_ACTIVE">
+                <state value="0" rotation="0 0 0"/>
+                <state value="1" rotation="118 0 0"/>
+                <state value="2" rotation="70 0 0"/>
+            </dashboard>
+			<dashboard displayType="MULTI_STATE" valueType="ignitionState" node="0>0|4|0|2|0|0" doInterpolation="true" groups="MOTOR_ACTIVE">
+                <state value="0" rotation="0 0 0"/>
+                <state value="1" rotation="1 0 0"/>
+                <state value="2" rotation="0 0 0"/>
+            </dashboard>
+		</dashboards>
+    </motorized>
+
+    <drivable>
+        <steeringWheel node="0>0|4|0|0|0" indoorRotation="540" outdoorRotation="30" />
+		<dashboards>
+            <dashboard displayType="ROT"     valueType="decelerationAxis" node="0>0|4|3|1" minRot="0 0 0" maxRot="17 0 0" doInterpolation="true" groups="MOTOR_ACTIVE"/>
+        </dashboards>
+    </drivable>
+
+    <powerConsumer ptoRpm="470" neededMaxPtoPower="150"/>
+
+    <dynamicMountAttacher triggerNode="dynamicMountTrigger" rootNode="cp690_main_component1" jointNode="baleDropper" forceAcceleration="100" mountType="TYPE_AUTO_ATTACH_XZ"/>
+
+    <attacherJoints>
+        <attacherJoint jointType="cutter" node="0>0|8|0|2" jointPositionOffset="0 0 -2.277" lowerTransLimit="0 0 0" lowerRotLimit="0 0 0" lockDownRotLimit="true" moveTime="2.5" comboTime="0" delayedObjectChanges="false" delayedObjectChangesOnAttach="true">
+            <distanceToGround lower="0.07" upper="2.0" />
+            <rotationNode node="0>0|8|0" lowerRotation="3 0 0" upperRotation="-13 0 0" startRotation="0 0 0"/>
+            <bottomArm rotationNode="0>0|16|2" referenceNode="0>0|16|2|1" startRotation="0 0 0"/>
+			<schema position="1 0" rotation="0" invertX="true" />
+            <attachSound template="HEADER_ATTACH_01" linkNode="0>0|8|0|2"/>
+        </attacherJoint>
+    </attacherJoints>
+
+    <connectionHoses>
+        <target attacherJointIndices="1" type="hydraulicIn" node="0>0|5|0|0"/>
+		<target attacherJointIndices="1" type="hydraulicOut" node="0>0|5|1|0"/>
+		<target attacherJointIndices="1" type="hydraulicIn" node="0>0|5|2|0"/>
+        <target attacherJointIndices="1" type="hydraulicOut" node="0>0|5|3|0"/>
+		<target attacherJointIndices="1" type="electric" node="0>0|5|4" socket="electric"/>
+    </connectionHoses>
+
+    <dynamicallyLoadedParts>
+        <dynamicallyLoadedPart node="2|3" linkNode="0>0|5|0" filename="$data/shared/connectionHoses/connectors.i3d" />
+		<dynamicallyLoadedPart node="2|3" linkNode="0>0|5|1" filename="$data/shared/connectionHoses/connectors.i3d" />
+		<dynamicallyLoadedPart node="2|3" linkNode="0>0|5|2" filename="$data/shared/connectionHoses/connectors.i3d" />
+		<dynamicallyLoadedPart node="2|3" linkNode="0>0|5|3" filename="$data/shared/connectionHoses/connectors.i3d" />
+		<dynamicallyLoadedPart node="0" linkNode="0>0|14|0" filename="$data/shared/assets/starfire.i3d" />
+    </dynamicallyLoadedParts>
+
+    <fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration>
+                <fillUnits allowFoldingWhileFilled="false" allowFoldingThreshold="11000">
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypes="cotton" capacity="10000">
+                        <dashboard displayType="ANIMATION" valueType="fillLevel" animName="tensionerAnimation" />
+					    <dashboard displayType="NUMBER" valueType="fillLevel" numbers="0>0|4|1|0|0|3|0|2"  numberColor="0.016 0.016 0.016 1" precision="0" emissiveScale="1" groups="MOTOR_ACTIVE"/>
+					</fillUnit>
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypes="cotton" capacity="2500" showInShop="false">
+					    <dashboard displayType="NUMBER" valueType="fillLevel" numbers="0>0|4|1|0|0|3|0|3"  numberColor="0.016 0.016 0.016 1" precision="0" emissiveScale="1" groups="MOTOR_ACTIVE"/>
+					</fillUnit>
+					<fillUnit unitTextOverride="$l10n_unit_literShort" showOnHud="false" showInShop="false" fillTypes="diesel" capacity="1022">
+                        <dashboard displayType="ANIMATION" valueType="fillLevel" animName="loadingBarFuel" groups="MOTOR_ACTIVE"/>
+                    </fillUnit>
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" showOnHud="false" showInShop="false" showOnInfoHud="false" fillTypes="def" capacity="61">
+                        <dashboard displayType="ANIMATION" valueType="fillLevel" animName="loadingBarDef" groups="MOTOR_ACTIVE"/>
+                    </fillUnit>
+					<fillUnit unitTextOverride="$l10n_unit_literShort" fillTypes="cotton" capacity="500" showInShop="false"/>
+                </fillUnits>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit>
+
+    <fillVolume>
+        <fillVolumeConfigurations>
+            <fillVolumeConfiguration>
+                <volumes>
+                    <volume node="fillVolume" fillUnitIndex="2" maxAllowedHeapAngle="10"/>
+                </volumes>
+            </fillVolumeConfiguration>
+        </fillVolumeConfigurations>
+    </fillVolume>
+
+    <combine fillUnitIndex="2" allowThreshingDuringRain="false">
+        <swath available="false"/>
+        <chopper available="false"/>
+
+        <fillEffect>
+            <effectNode effectClass="ParticleEffect" effectNode="loadingEmitter01" particleType="LOADING" worldSpace="false" lifespan="0.2"/>
+            <effectNode effectClass="ParticleEffect" effectNode="loadingEmitter02" particleType="LOADING" worldSpace="false" lifespan="0.3"/>
+			<effectNode effectClass="ParticleEffect" effectNode="0>0|8|2|7|2" particleType="LOADING" worldSpace="false" lifespan="0.2"/>
+			<effectNode effectClass="ParticleEffect" effectNode="0>0|17|0" particleType="LOADING" worldSpace="false" lifespan="0.1"/>
+			<effectNode effectClass="ParticleEffect" effectNode="0>0|17|1" particleType="LOADING" worldSpace="false" lifespan="0.11"/>
+			<effectNode effectClass="ParticleEffect" effectNode="0>0|17|2" particleType="LOADING" worldSpace="false" lifespan="0.11"/>
+			<effectNode effectClass="ParticleEffect" effectNode="0>0|17|3" particleType="LOADING" worldSpace="false" lifespan="0.11"/>
+		</fillEffect>
+
+        <folding allowWhileThreshing="false" fillLevelThresholdPct="1"/>
+
+        <animationNodes>
+            <animationNode node="auger" rotSpeed="400" rotAxis="1" turnOnFadeTime="4" turnOffFadeTime="3" />
+        </animationNodes>
+    </combine>
+
+    <baler maxPickupLitersPerSecond="950" canUnloadUnfinishedBale="true">
+        <baleTypes>
+			<baleType isRoundBale="true" width="2.38" diameter="2.38">
+				<nodes baleNode="baleNode" scaleNode="baleNode" scaleComponents="1 1 0"/>
+                <animations unloadAnimation="unloadBale" dropAnimationTime="10"/>
+            </baleType>
+        </baleTypes>
+
+        <baleAnimation closeAnimationName="closeDoor" />
+
+        <platform animationName="dropBale" nextBaleTime="0.7619" aiSpeed="3"/>
+
+        <buffer fillUnitIndex="2" overloadingDuration="5" balerDisplayType="ROUNDBALE_COTTON"/>
+
+        <animationNodes>
+            <animationNode node="chamberBelt" class="ScrollingAnimation"  shaderParameterName="offsetUV" scrollSpeed="1" shaderParameterComponent="2" turnOnFadeTime="1" turnOffFadeTime="1"/>
+        </animationNodes>
+    </baler>
+
+    <pipe dischargeNodeIndex="1">
+        <states num="2" unloading="2" />
+        <unloadingTriggers>
+            <unloadingTrigger node="0>0|12" />
+        </unloadingTriggers>
+    </pipe>
+	
+	<dischargeable>
+        <dischargeNode node="0>0" emptySpeed="120" fillUnitIndex="5" maxDistance="8">
+            <raycast yOffset="1" useWorldNegYDirection="true"/>
+            <info width="0.4" length="0.4" useRaycastHitPosition="true"/>
+        </dischargeNode>
+    </dischargeable>
+
+    <foldable>
+        <foldingConfigurations>
+            <foldingConfiguration>
+                <foldingParts startMoveDirection="1">
+                    <foldingPart animationName="folding" speedScale="1.0" />
+                </foldingParts>
+            </foldingConfiguration>
+        </foldingConfigurations>
+    </foldable>
+
+    <wipers>
+        <wiper animName="wiperFrontAnimation" >
+            <state animSpeed="0.75" animPause="2.0" />
+            <state animSpeed="0.75" animPause="0.0" />
+            <state animSpeed="1.10" animPause="0.0" />
+        </wiper>
+    </wipers>
+
+    <animations>
+		<animation name="joystickMovement">
+            <part node="0>0|4|1|0|0|2" startTime="0"    endTime="0.8" startRot="-22.6 -1.8 -2.9" endRot="0 0 1" />
+            <part node="0>0|4|1|0|0|2" startTime="0.8"  endTime="1.2" startRot="0 0 1" endRot="0 0 -5" />
+            <part node="0>0|4|1|0|0|2" startTime="1.2"  endTime="2.0" startRot="0 0 -5" endRot="26.5 -2 -1.2" />
+        </animation>
+		<animation name="folding" soundVolumeFactor="2.5">
+            <part node="0>0|8|3|3" startTime="0"    endTime="0.105" visibility="true" />
+		    <part node="0>0|8|3|3" startTime="0.105"    endTime="1.2" visibility="false" />
+			<part node="0>0|4|1|0|0|3|0|1" startTime="1" endTime="1.001"  startRot="0 0 0" endRot="0 0 0" />
+			<part node="0>0|4|1|0|0|3|0|1" startTime="1.609" endTime="1.61"  startRot="0 -21 0" endRot="0 -21 0" />
+			<part node="0>0|4|1|0|0|3|0|1" startTime="2.417" endTime="2.418"  startRot="0 -42 0" endRot="0 -42 0" />
+			<part node="0>0|4|1|0|0|3|0|0" startTime="2.417" endTime="2.418"  startRot="0 0 0" endRot="0 0 0" />
+			<part node="0>0|4|1|0|0|3|0|0" startTime="3.363" endTime="3.364"  startRot="0 -6 0" endRot="0 -6 0" />
+			<part node="0>0|4|1|0|0|3|0|0" startTime="4.309" endTime="4.310"  startRot="0 -12 0" endRot="0 -12 0" />
+			<part node="0>0|4|1|0|0|3|0|0" startTime="5.205" endTime="5.206"  startRot="0 -18 0" endRot="0 -18 0" />
+			<part node="0>0|4|1|0|0|3|0|0" startTime="6.182" endTime="6.183"  startRot="0 -24 0" endRot="0 -24 0" />
+			<part node="0>0|4|1|0|0|3|0|0|0" startTime="1.679" endTime="1.680"  startRot="0 0 0" endRot="0 0 0" />
+			<part node="0>0|4|1|0|0|3|0|0|0" startTime="2.591" endTime="2.592"  startRot="0 17 0" endRot="0 17 0" />
+			<part node="0>0|4|1|0|0|3|0|0|0" startTime="3.503" endTime="3.504"  startRot="0 34 0" endRot="0 34 0" />
+			<part node="0>0|4|1|0|0|3|0|0|0" startTime="4.415" endTime="4.416"  startRot="0 51 0" endRot="0 51 0" />
+			<part node="0>0|4|1|0|0|3|0|0|0" startTime="5.327" endTime="5.328"  startRot="0 68 0" endRot="0 68 0" />
+			<part node="0>0|4|1|0|0|3|0|0|0" startTime="6.00" endTime="6.001"  startRot="0 85 0" endRot="0 85 0" />
+			<part node="0>0|4|1|0|0|3|0|1" startTime="6.203" endTime="6.204"  startRot="0 -42 0" endRot="0 -42 0" />
+			<part node="0>0|4|1|0|0|3|0|1" startTime="7.335" endTime="7.336"  startRot="0 -50 0" endRot="0 -50 0" />
+			<part node="0>0|4|1|0|0|3|0|1" startTime="8.467" endTime="8.468"  startRot="0 -58 0" endRot="0 -58 0" />
+			<part node="0>0|4|1|0|0|3|0|1" startTime="9.599" endTime="9.6"  startRot="0 -66 0" endRot="0 -66 0" />
+			<part node="0>0|4|1|0|0|3|0|1" startTime="10.732" endTime="10.733"  startRot="0 -74 0" endRot="0 -74 0" />
+			<part node="0>0|4|1|0|0|3|0|1" startTime="11.865" endTime="11.866"  startRot="0 -82 0" endRot="0 -82 0" />
+			<part node="0>0|4|1|0|0|3|0|1" startTime="12.996" endTime="12.997"  startRot="0 -90 0" endRot="0 -90 0" />
+			<part node="0>0|4|1|0|0|3|0|0" startTime="6.203" endTime="6.204"  startRot="0 -24 0" endRot="0 -24 0" />
+			<part node="0>0|4|1|0|0|3|0|0" startTime="7.335" endTime="7.336"  startRot="0 -29.66 0" endRot="0 -29.66 0" />
+			<part node="0>0|4|1|0|0|3|0|0" startTime="8.467" endTime="8.468"  startRot="0 -35.33 0" endRot="0 -35.33 0" />
+			<part node="0>0|4|1|0|0|3|0|0" startTime="9.599" endTime="9.6"  startRot="0 -40.99 0" endRot="0 -40.99 0" />
+			<part node="0>0|4|1|0|0|3|0|0" startTime="10.732" endTime="10.733"  startRot="0 -46.66 0" endRot="0 -46.66 0" />
+			<part node="0>0|4|1|0|0|3|0|0" startTime="11.865" endTime="11.866"  startRot="0 -52.33 0" endRot="0 -52.33 0" />
+			<part node="0>0|4|1|0|0|3|0|0" startTime="12.996" endTime="12.997"  startRot="0 -58 0" endRot="0 -58 0" />
+			<part node="0>0|4|1|0|0|3|0|0|0" startTime="6.203" endTime="6.204"  startRot="0 85 0" endRot="0 85 0" />
+			<part node="0>0|4|1|0|0|3|0|0|0" startTime="7.335" endTime="7.336"  startRot="0 85.5 0" endRot="0 85.5 0" />
+			<part node="0>0|4|1|0|0|3|0|0|0" startTime="8.467" endTime="8.468"  startRot="0 86 0" endRot="0 86 0" />
+			<part node="0>0|4|1|0|0|3|0|0|0" startTime="9.599" endTime="9.6"  startRot="0 86.5 0" endRot="0 86.5 0" />
+			<part node="0>0|4|1|0|0|3|0|0|0" startTime="10.732" endTime="10.733"  startRot="0 87 0" endRot="0 87 0" />
+			<part node="0>0|4|1|0|0|3|0|0|0" startTime="11.865" endTime="11.866"  startRot="0 87.5 0" endRot="0 87.5 0" />
+			<part node="0>0|4|1|0|0|3|0|0|0" startTime="12.996" endTime="12.997"  startRot="0 88 0" endRot="0 88 0" />
+			<!-- folding -->
+            <part node="preChamber" startTime="5.521" endTime="12.997"  startTrans="-0.0 0.0 0.0" endTrans="-0.0 -0.789 0.0" />
+            <part node="baleChamber" startTime="2.417" endTime="5.368"  startRot="0.0 0.0 0.0" endRot="-18.0 0.0 0.0" />
+            <part node="baleChamber" startTime="5.368" endTime="5.912"  startRot="-18.0 0.0 0.0" endRot="-23.8 0.0 0.0" />
+            <part node="baleChamber" startTime="5.912" endTime="6.203"  startRot="-23.8 0.0 0.0" endRot="-24.5 0.0 0.0" />
+            <part node="baleChamber" startTime="6.203" endTime="6.893"  startRot="-24.5 0.0 0.0" endRot="-29.73 0.0 0.0" />
+            <part node="baleChamber" startTime="6.893" endTime="7.571"  startRot="-29.73 0.0 0.0" endRot="-34.885 0.0 0.0" />
+            <part node="baleChamber" startTime="7.571" endTime="8.476"  startRot="-34.885 0.0 0.0" endRot="-41.682 0.0 0.0" />
+            <part node="baleChamber" startTime="8.476" endTime="10.736"  startRot="-41.682 0.0 0.0" endRot="-57.403 0.0 0.0" />
+            <part node="baleChamber" startTime="10.736" endTime="12.093"  startRot="-57.403 0.0 0.0" endRot="-65.578 0.0 0.0" />
+            <part node="baleChamber" startTime="12.093" endTime="12.997"  startRot="-65.578 0.0 0.0" endRot="-70.6 0.0 0.0" />
+            <part node="backDoorArm" startTime="1.679" endTime="5.368"  startRot="0.0 0.0 0.0" endRot="86.804 0.0 0.0" />
+            <part node="backDoorArm" startTime="5.368" endTime="6.203"  startRot="86.804 0.0 0.0" endRot="88.0 0.0 0.0" />
+            <part node="backDoorArm" startTime="6.203" endTime="6.893"  startRot="88.0 0.0 0.0" endRot="93.309 0.0 0.0" />
+            <part node="backDoorArm" startTime="6.893" endTime="7.571"  startRot="93.309 0.0 0.0" endRot="98.404 0.0 0.0" />
+            <part node="backDoorArm" startTime="7.571" endTime="8.476"  startRot="98.404 0.0 0.0" endRot="104.758 0.0 0.0" />
+            <part node="backDoorArm" startTime="8.476" endTime="9.38"  startRot="104.758 0.0 0.0" endRot="110.295 0.0 0.0" />
+            <part node="backDoorArm" startTime="9.38" endTime="10.736"  startRot="110.295 0.0 0.0" endRot="117.651 0.0 0.0" />
+            <part node="backDoorArm" startTime="10.736" endTime="12.093"  startRot="117.651 0.0 0.0" endRot="122.594 0.0 0.0" />
+            <part node="backDoorArm" startTime="12.093" endTime="12.997"  startRot="122.594 0.0 0.0" endRot="124.9 0.0 0.0" />
+            <part node="baleDropper" startTime="1.0" endTime="2.417"  startRot="110.0 0.0 0.0" endRot="85.0 0.0 0.0" />
+            <part node="baleDropper" startTime="6.203" endTime="12.997"  startRot="85.0 0.0 0.0" endRot="25.0 0.0 0.0" />
+			<part node="0>0|16|0" startTime="10.5" endTime="12.997"  startRot="0 0 0" endRot="-80 0 0" />
+			<part node="0>0|16|0|0|0" startTime="11" endTime="12.997"  startRot="30 0 0" endRot="77.5 0 0" />
+			<part node="0>0|16|0|0|0" startTime="6.521" endTime="11"  startRot="-22 0 0" endRot="30 0 0" />
+			<part node="0>0|16|0|0|0" startTime="5.521" endTime="6.521"  startRot="-12 0 0" endRot="-22 0 0" />
+			<sound template="defaultHydraulicSound"  startTime="5.51"  endTime="9.99"  volumeScale="1.0" pitchScale="0.4" linkNode="baleChamber"/>
+            <sound template="hydraulicLayerTone2"    startTime="5.51"  endTime="9.99"  volumeScale="1.7" pitchScale="0.6" linkNode="baleChamber"/>
+            <sound template="hydraulicLayerTone"     startTime="6.01"  endTime="12.99" volumeScale="0.6" pitchScale="0.5" linkNode="backDoorArm"/>
+            <sound template="hydraulicLayerTone"     startTime="2.51"  endTime="5.80"  volumeScale="0.6" pitchScale="0.5" linkNode="backDoorArm"/>
+            <sound template="defaultHydraulicSound"  startTime="1.01"  endTime="2.49"  volumeScale="0.4" pitchScale="0.7" linkNode="backDoorArm"/>
+            <sound template="defaultHydraulicSound"  startTime="6.01"  endTime="12.99" volumeScale="0.4" pitchScale="0.7" linkNode="backDoorArm"/>
+            <sound template="hydraulicLayerTone3"    startTime="1.7"   endTime="5.4"   volumeScale="0.6" pitchScale="0.3" linkNode="backDoorArm"/>
+            <sound template="cylinderPunch"          startTime="9.89"  direction="1"   volumeScale="0.5" pitchScale="0.7" linkNode="preChamber"/>
+            <sound template="metalLowVar2"           startTime="9.85"  direction="1"   volumeScale="4.7" pitchScale="1.2" linkNode="preChamber"/>
+            <sound template="metalClose"             startTime="9.85"  direction="1"   volumeScale="2.2" pitchScale="0.4" linkNode="preChamber"/>
+            <sound template="cylinderPunch"          startTime="5.51"  direction="-1"  volumeScale="0.5" pitchScale="1.0" linkNode="preChamber"/>
+            <sound template="metalLowVar2"           startTime="5.51"  direction="-1"  volumeScale="3.5" pitchScale="1.0" linkNode="preChamber"/>
+            <sound template="metalClose"             startTime="5.51"  direction="-1"  volumeScale="2.0" pitchScale="0.5" linkNode="preChamber"/>
+            <sound template="cylinderPunch"          startTime="1.69"  direction="-1"  volumeScale="0.7" pitchScale="0.6" linkNode="baleChamber"/>
+            <sound template="metalLowVar2"           startTime="1.65"  direction="-1"  volumeScale="3.0" pitchScale="0.8" linkNode="baleChamber"/>
+            <sound template="metalClose"             startTime="1.65"  direction="-1"  volumeScale="1.7" pitchScale="0.6" linkNode="baleChamber"/>
+            <sound template="metalClose"             startTime="1.01"  direction="-1"  volumeScale="0.6" pitchScale="1.2" linkNode="backDoorArm"/>
+            <sound template="metalLowVar2"           startTime="1.01"  direction="-1"  volumeScale="3.0" pitchScale="1.0" linkNode="backDoorArm"/>
+            <sound template="metalOpen"              startTime="6.0"   direction="-1"  volumeScale="4.0" pitchScale="0.3" linkNode="baleChamber"/>
+            <sound template="metalOpen"              startTime="1.61"  direction="1"   volumeScale="2.5" pitchScale="0.5" linkNode="baleChamber"/>
+            <sound template="metalLowVar2"           startTime="6.01"  direction="1"   volumeScale="3.1" pitchScale="1.2" linkNode="baleDropper"/>
+            <sound template="metalClose"             startTime="6.01"  direction="1"   volumeScale="1.8" pitchScale="0.6" linkNode="baleDropper"/>
+            <sound template="cylinderPunch"          startTime="6.01"  direction="1"   volumeScale="0.4" pitchScale="1.1" linkNode="baleDropper"/>
+        </animation>
+
+        <animation name="unloadBale" soundVolumeFactor="2.5">
+			<part node="0>0|4|1|0|0|3|0|0|0" startTime="1.945" endTime="1.946"  startRot="0 0 0" endRot="0 0 0" />
+			<part node="0>0|4|1|0|0|3|0|0|0" startTime="2.984" endTime="2.985"  startRot="0 0 0" endRot="0 23 0" />
+			<part node="0>0|4|1|0|0|3|0|0|0" startTime="3.946" endTime="3.947"  startRot="0 23 0" endRot="0 46 0" />
+			<part node="0>0|4|1|0|0|3|0|0|0" startTime="4.946" endTime="4.947"  startRot="0 46 0" endRot="0 69 0" />
+			<part node="0>0|4|1|0|0|3|0|1" startTime="0" endTime="0.001"  startRot="0 0 0" endRot="0 0 0" />
+			<part node="0>0|4|1|0|0|3|0|1" startTime="1.945" endTime="1.946"  startRot="0 0 0" endRot="0 -32 0" />
+			<part node="0>0|4|1|0|0|3|0|1" startTime="7.629" endTime="7.63"  startRot="0 -32 0" endRot="0 -64 0" />
+			<part node="0>0|4|1|0|0|3|0|1" startTime="8.814" endTime="8.815"  startRot="0 -64 0" endRot="0 -85 0" />
+			<part node="backDoorArm" startTime="1.945" endTime="5.984"  startRot="0.0 0.0 0.0" endRot="110.0 0.0 0.0" />
+            <part node="baleNode" startTime="3.302" endTime="4.954"  startTrans="0.0 0.0 0.0" endTrans="0.518 -0.437 -0.0" startRot="0.0 0.0 0.0" endRot="0.0 0.0 -25.0" />
+            <part node="baleNode" startTime="4.954" endTime="5.929"  startTrans="0.518 -0.437 -0.0" endTrans="1.403 -0.664 0.0" startRot="0.0 0.0 -25.0" endRot="0.0 0.0 -67.654" />
+            <part node="baleNode" startTime="5.929" endTime="6.263"  startTrans="1.403 -0.664 0.0" endTrans="1.762 -0.76 0.0" startRot="0.0 0.0 -67.654" endRot="0.0 0.0 -83.082" />
+            <part node="baleNode" startTime="6.263" endTime="7.597"  startTrans="1.762 -0.76 0.0" endTrans="2.723 -0.790 0.0" startRot="0.0 0.0 -83.082" endRot="0.0 0.0 -130.343" />
+            <part node="baleNode" startTime="7.597" endTime="8.332"  startTrans="2.723 -0.790 0.0" endTrans="2.9234 -1.0483 -0.0" startRot="0.0 0.0 -130.343" endRot="0.0 0.0 -142.03" />
+            <part node="baleNode" startTime="8.332" endTime="9.166"  startTrans="2.9234 -1.0483 -0.0" endTrans="3.0912 -1.351 -0.0" startRot="0.0 0.0 -142.03" endRot="0.0 0.0 -155.281" />
+            <part node="baleNode" startTime="9.166" endTime="9.583"  startTrans="3.0912 -1.351 -0.0" endTrans="3.1469 -1.5086 -0.0" startRot="0.0 0.0 -155.281" endRot="0.0 0.0 -161.907" />
+            <part node="baleNode" startTime="9.583" endTime="10.0"  startTrans="3.1469 -1.5086 -0.0" endTrans="3.2062 -1.6726 -0.0" startRot="0.0 0.0 -161.907" endRot="0.0 0.0 -168.532" />
+            <part node="baleDropper" startTime="0.0" endTime="1.945"  startRot="110.0 0.0 0.0" endRot="60.0 0.0 0.0" />
+            <part node="baleDropper" startTime="7.629" endTime="10.0"  startRot="60.0 0.0 0.0" endRot="26.0 0.0 0.0" />
+            <part node="baleDropperCollision01" startTime="9.9" endTime="10.0"  startRot="0 0 0" endRot="60 0 0" />
+            <part node="backDoorJointRot" startTime="0.0" endTime="3.333"  startRot="-66.0 0.0 0.0" endRot="-57.662 0.0 0.0" />
+            <part node="backDoorJointRot" startTime="3.333" endTime="4.583"  startRot="-57.662 0.0 0.0" endRot="-37.791 0.0 0.0" />
+            <part node="backDoorJointRot" startTime="4.583" endTime="5.0"  startRot="-37.791 0.0 0.0" endRot="-12.5 0.0 0.0" />
+            <part node="backDoorJointRot" startTime="5.0" endTime="5.417"  startRot="-12.5 0.0 0.0" endRot="6.245 0.0 0.0" />
+            <part node="backDoorJointRot" startTime="5.417" endTime="5.833"  startRot="6.245 0.0 0.0" endRot="30.0 0.0 0.0" />
+            <part node="backDoorJointRot" startTime="5.833" endTime="7.5"  startRot="30.0 0.0 0.0" endRot="0.0 0.0 0.0" />
+            <part node="beltTensionerJointDoor" startTime="0.0" endTime="3.333"  startRot="66.0 0.0 0.0" endRot="55.165 0.0 0.0" />
+            <part node="beltTensionerJointDoor" startTime="3.333" endTime="4.583"  startRot="55.165 0.0 0.0" endRot="-16.71 0.0 0.0" />
+            <part node="beltTensionerJointDoor" startTime="4.583" endTime="5.0"  startRot="-16.71 0.0 0.0" endRot="-36.551 0.0 0.0" />
+            <part node="beltTensionerJointDoor" startTime="5.0" endTime="5.417"  startRot="-36.551 0.0 0.0" endRot="-34.798 0.0 0.0" />
+            <part node="beltTensionerJointDoor" startTime="5.417" endTime="5.833"  startRot="-34.798 0.0 0.0" endRot="-30.0 0.0 0.0" />
+            <part node="beltTensionerJointDoor" startTime="5.833" endTime="7.5"  startRot="-30.0 0.0 0.0" endRot="0.0 0.0 0.0" />
+            <part node="beltTensionerJointChamber" startTime="3.333" endTime="5.0"  startRot="-33.329 0.0 0.0" endRot="-43.635 0.0 0.0" />
+            <part node="beltTensionerJointChamber" startTime="5.0" endTime="5.833"  startRot="-43.635 0.0 0.0" endRot="-47.94 0.0 0.0" />
+            <part node="beltTensionerJointChamber" startTime="5.833" endTime="7.5"  startRot="-47.94 0.0 0.0" endRot="0.0 0.0 0.0" />
+            <part node="baleChamberJointRot" startTime="3.333" endTime="5.0"  startRot="19.616 0.0 0.0" endRot="0.186 0.0 0.0" />
+            <part node="baleChamberJointRot" startTime="5.0" endTime="5.833"  startRot="0.186 0.0 0.0" endRot="-24.049 0.0 0.0" />
+            <part node="baleChamberJointRot" startTime="5.833" endTime="7.5"  startRot="-24.049 0.0 0.0" endRot="0.0 0.0 0.0" />
+            <part node="beltTensioner" startTime="5.833" endTime="7.5"  startRot="0.0 0.0 0.0" endRot="-50.0 0.0 0.0" />
+            <sound template="hydraulicLayerTone3"    startTime="1.99"   endTime="5.99"   volumeScale="0.6" pitchScale="0.3" linkNode="backDoorArm"/>
+            <sound template="hydraulicLayerTone"     startTime="1.99"   endTime="5.99"   volumeScale="0.6" pitchScale="0.5" linkNode="backDoorArm"/>
+            <sound template="defaultHydraulicSound"  startTime="0.01"   endTime="1.99"   volumeScale="0.4" pitchScale="0.7" linkNode="backDoorArm"/>
+            <sound template="defaultHydraulicSound"  startTime="7.51"   endTime="9.99"   volumeScale="0.4" pitchScale="0.7" linkNode="backDoorArm"/>
+            <sound template="defaultHydraulicSound"  startTime="6.01"   endTime="7.49"   volumeScale="0.7" pitchScale="0.4" linkNode="baleChamber"/>
+            <sound template="metalOpen"              startTime="1.81"  direction="1"     volumeScale="2.5" pitchScale="0.4" linkNode="baleChamber"/>
+        </animation>
+        
+		<animation name="closeDoor" resetOnStart="false" soundVolumeFactor="2.5">
+            <part node="0>0|4|1|0|0|3|0|0|0" startTime="1" endTime="1.001"  startRot="0 69 0" endRot="0 46 0" />
+			<part node="0>0|4|1|0|0|3|0|0|0" startTime="2" endTime="2.001"  startRot="0 46 0" endRot="0 23 0" />
+			<part node="0>0|4|1|0|0|3|0|0|0" startTime="3" endTime="3.001"  startRot="0 23 0" endRot="0 0 0" />
+			<part node="0>0|4|1|0|0|3|0|0|0" startTime="3.999" endTime="4"  startRot="0 0 0" endRot="0 0 0" />
+			<part node="backDoorArm" requiredAnimation="folding" requiredAnimationRange="0 0.08"  startTime="0" endTime="4" startRot="110 0 0" endRot="0 0 0" />
+            <part node="baleNode"    requiredAnimation="folding" requiredAnimationRange="0 0.08"  startTime="0" endTime="4" endRot="0 0 0" endTrans="0 0 0"/>
+            <sound template="hydraulicLayerTone3"    startTime="0.01"   endTime="3.99"   volumeScale="0.6" pitchScale="0.3" linkNode="backDoorArm"/>
+            <sound template="hydraulicLayerTone"     startTime="0.01"   endTime="3.99"   volumeScale="0.4" pitchScale="0.3" linkNode="backDoorArm"/>
+            <sound template="cylinderPunch"          startTime="3.99"  direction="1"  volumeScale="0.7" pitchScale="0.6" linkNode="baleChamber"/>
+            <sound template="metalLowVar2"           startTime="3.85"  direction="1"  volumeScale="3.0" pitchScale="0.8" linkNode="baleChamber"/>
+            <sound template="metalClose"             startTime="3.85"  direction="1"  volumeScale="1.7" pitchScale="0.6" linkNode="baleChamber"/>
+        </animation>
+		
+		<animation name="dropBale" resetOnStart="false" soundVolumeFactor="2.5" >
+			<part node="0>0|4|1|0|0|3|0|1" startTime="1.999" endTime="2"  startRot="0 -85 0" endRot="0 -95 0" />
+			<part node="0>0|4|1|0|0|3|0|1" startTime="4" endTime="4.001"  startRot="0 -95 0" endRot="0 -64 0" />
+			<part node="0>0|4|1|0|0|3|0|1" startTime="6" endTime="6.001"  startRot="0 -64 0" endRot="0 -32 0" />
+			<part node="0>0|4|1|0|0|3|0|1" startTime="7.998" endTime="7.999"  startRot="0 -32 0" endRot="0 0 0" />
+			<part node="baleDropper"           startTime="0" endTime="2" startRot="26 0 0" endRot="5 0 0" />
+            <part node="baleDropperCollision01"  startTime="0" endTime="2" startRot="60 0 0" endRot="0 0 0"/>
+            <part node="baleDropperCollision02"  startTime="1" endTime="2.5" startRot="0 0 0" endRot="-45 0 0"/>
+            <part node="baleDropperCollision02"  startTime="2.5" endTime="4" startRot="-45 0 0" endRot="0 0 0"/>
+            <part node="baleDropperCollision01"  startTime="3.5" endTime="5" startRot="0 0 0" endRot="60 0 0"/>
+            <part node="baleDropper"           startTime="4" endTime="8" startRot="5 0 0" endRot="110 0 0" />
+            <sound template="defaultHydraulicSound"  startTime="4.01"  endTime="7.99"  volumeScale="0.4" pitchScale="0.7" linkNode="backDoorArm"/>
+            <sound template="defaultHydraulicSound"  startTime="0.01"  endTime="1.99"  volumeScale="0.4" pitchScale="0.7" linkNode="backDoorArm"/>
+            <sound template="metalClose"             startTime="7.99"  direction="1"  volumeScale="0.4" pitchScale="1.5" linkNode="backDoorArm"/>
+            <sound template="metalLowVar2"           startTime="7.99"  direction="1"  volumeScale="3.0" pitchScale="1.5" linkNode="backDoorArm"/>
+        </animation>
+
+        <animation name="tensionerAnimation">
+            <part node="beltTensioner" startTime="0" endTime="1"  startRot="-50.0 0.0 0.0" endRot="0.0 0.0 0.0" />
+            <part node="backDoorJointRot" startTime="0" endTime="1"  startRot="0 0.0 0.0" endRot="-66.0 0.0 0.0" />
+            <part node="beltTensionerJointDoor" startTime="0" endTime="1"  startRot="0.0 0.0 0.0" endRot="66.0 0.0 0.0" />
+            <part node="beltTensionerJointChamber" startTime="0" endTime="1"  startRot="0.0 0.0 0.0" endRot="-33.329 0.0 0.0" />
+            <part node="baleChamberJointRot" startTime="0" endTime="1"  startRot="0.0 0.0 0.0" endRot="19.616 0.0 0.0" />
+        </animation>
+		<animation name="porta">
+		  <part node="0>0|10|0|0" startTime="0.1" endTime="1.2" startRot="0 0 0" endRot="0 -64 0"/>
+		  <part node="0>0|10|3|0" startTime="0"    endTime="0.105" visibility="false" />
+		  <part node="0>0|10|3|0" startTime="0.105"    endTime="1.2" visibility="true" />
+		  <sound file="som/closeDamper.ogg" startTime="0.2" endTime="1.2"  direction="-1"  volumeScale="0.5" pitchScale="0.9" fadeOut="0.5" linkNode="0>0|10|0|0"/>
+          <sound file="som/openDamper.ogg" startTime="0.2" endTime="1.1"  direction="1" volumeScale="0.3" pitchScale="0.9" fadeOut="0.5" linkNode="0>0|10|0|0"/>
+          <sound template="metalClose" startTime="0.1"  direction="1"  volumeScale="1.8" pitchScale="1.8" fadeOut="0.1" linkNode="0>0|10|0|0"/>
+          <sound template="metalClose" startTime="0.1"  direction="-1"  volumeScale="1.8" pitchScale="1.8" fadeOut="0.1" linkNode="0>0|10|0|0"/>
+		</animation>
+		
+		<animation name="loadingBarTemperature">
+             <part node="0>0|4|4|1|2|0" startTime="0.0" endTime="1.0" startScale="1 0 1" endScale="1 1 1"/>
+        </animation>
+        <animation name="loadingBarFuel">
+             <part node="0>0|4|4|1|2|1" startTime="0.0" endTime="1.0" startScale="1 0 1" endScale="1 1 1"/>
+        </animation>
+        <animation name="loadingBarDef">
+             <part node="0>0|4|4|1|2|2" startTime="0.0" endTime="1.0" startScale="1 0 1" endScale="1 1 1"/>
+        </animation>
+		
+		<animation name="wiperFrontAnimation">
+            <part node="0>0|4|3|0|0" startTime="0" endTime="0.5"  startRot="0 0 0" endRot="0 7 35.5" />
+            <part node="0>0|4|3|0|0" startTime="0.5" endTime="1.0"  startRot="0 7 35.5" endRot="0 0 75" />
+            <part node="0>0|4|3|0|0|0|0" startTime="0" endTime="0.25"  startRot="0 0 0" endRot="-15.25 9 4" />
+            <part node="0>0|4|3|0|0|0|0" startTime="0.25" endTime="0.5"  startRot="-15.25 9 4" endRot="-35.5 9 0" />
+            <part node="0>0|4|3|0|0|0|0" startTime="0.5" endTime="1"  startRot="-35.5 9 0" endRot="-75 -5 0" />
+            <sound template="wiper1" startTime="0" endTime="1.0" direction="1"   volumeScale="1" pitchScale="1.0" fadeOut="0.1" linkNode="0>0|4|3|0|0|0|0"/>
+            <sound template="wiper2" startTime="0" endTime="1.0" direction="-1"  volumeScale="1" pitchScale="1.0" fadeOut="0.1" linkNode="0>0|4|3|0|0|0|0"/>
+        </animation>
+		
+		<animation name="barragps">
+			<part node="0>0|4|1|0|0|3|2|0" startTime="0.2" endTime="0.34" startScale="1 1 1" endScale="0.9 1 1" />
+			<part node="0>0|4|1|0|0|3|2|0" startTime="0.34" endTime="0.74" startScale="0.9 1 1" endScale="0.9 1 1" />
+			<part node="0>0|4|1|0|0|3|2|0" startTime="0.74" endTime="1.36" startScale="0.9 1 1" endScale="0.5 1 1" />
+			<part node="0>0|4|1|0|0|3|2|0" startTime="1.36" endTime="1.96" startScale="0.5 1 1" endScale="0.5 1 1" />
+            <part node="0>0|4|1|0|0|3|2|0" startTime="1.96" endTime="2.38" startScale="0.5 1 1" endScale="0.2 1 1" />
+			<part node="0>0|4|1|0|0|3|2|0" startTime="2.38" endTime="2.58" startScale="0.2 1 1" endScale="0.2 1 1" />
+            <part node="0>0|4|1|0|0|3|2|0" startTime="2.58" endTime="2.9" startScale="0.2 1 1" endScale="0 1 1" />	
+            <part node="0>0|4|4|6|0" startTime="0.2" endTime="0.34" startScale="1 1 1" endScale="0.9 1 1" />
+			<part node="0>0|4|4|6|0" startTime="0.34" endTime="0.74" startScale="0.9 1 1" endScale="0.9 1 1" />
+			<part node="0>0|4|4|6|0" startTime="0.74" endTime="1.36" startScale="0.9 1 1" endScale="0.5 1 1" />
+			<part node="0>0|4|4|6|0" startTime="1.36" endTime="1.96" startScale="0.5 1 1" endScale="0.5 1 1" />
+            <part node="0>0|4|4|6|0" startTime="1.96" endTime="2.38" startScale="0.5 1 1" endScale="0.2 1 1" />
+			<part node="0>0|4|4|6|0" startTime="2.38" endTime="2.58" startScale="0.2 1 1" endScale="0.2 1 1" />
+            <part node="0>0|4|4|6|0" startTime="2.58" endTime="2.9" startScale="0.2 1 1" endScale="0 1 1" />			
+        </animation>
+    </animations>
+
+    <cylindered>
+        <movingTools>
+			<controlGroups>
+                <controlGroup name="$l10n_geral"/>
+				<controlGroup name="$l10n_espelhos" />
+            </controlGroups>
+			<movingTool node="0>0|4|1|0">
+                <controls groupIndex="1"  axis="AXIS_CRANE_ARM3" invertAxis="false" mouseSpeedFactor="0.2" iconName="TOP_DOOR_ROTATE" />
+                <translation transSpeed="0.4" transAcceleration="5" transMax="0.05" transMin="-0.05" starTrans="0" translationAxis="2" />
+            </movingTool>
+			<movingTool node="0>0|4|1">
+                <controls groupIndex="1"  axis="AXIS_CRANE_ARM4" invertAxis="false" mouseSpeedFactor="0.2" iconName="TOP_DOOR_ROTATE" />
+                <translation transSpeed="0.4" transAcceleration="5" transMax="0.05" transMin="-0.05" starTrans="2.685" translationAxis="3" />
+            </movingTool>	
+			<movingTool node="0>0|4|0">
+                <controls groupIndex="1" axis="AXIS_CRANE_TOOL" invertAxis="false" mouseSpeedFactor="0.5" iconName="TOP_DOOR_ROTATE" />
+                <rotation rotSpeed="150" rotAcceleration="120" rotMax="10" rotMin="-10" startRot="0" rotationAxis="1"/>
+            </movingTool>
+			<movingTool node="0>0|10|0|0">
+                <controls groupIndex="1" axis="AXIS_CRANE_ARM" mouseSpeedFactor="0.2" iconName="TOP_DOOR_ROTATE" />
+                <animation animSpeed="1.5" animAcceleration="200" animName="porta"/>
+            </movingTool>
+			<movingTool node="0>0|4|3|2">
+                <controls groupIndex="1" axis="AXIS_CRANE_TOOL3" invertAxis="false" mouseSpeedFactor="2.3" iconName="TOP_DOOR_ROTATE" />
+                <rotation rotSpeed="850" rotAcceleration="200" rotMax="63" rotMin="0" startRot="0" rotationAxis="1"/>
+            </movingTool>
+			<movingTool node="0>0|9|0">
+                <controls groupIndex="2" axis="AXIS_CRANE_ARM" invertAxis="false" mouseSpeedFactor="0.2" iconName="TOP_DOOR_ROTATE" />
+                <rotation rotSpeed="50" rotAcceleration="120" rotMax="35" rotMin="0" startRot="10" rotationAxis="2"/>
+            </movingTool>
+			<movingTool node="0>0|9|1">
+                <controls groupIndex="2" axis="AXIS_CRANE_ARM2" invertAxis="false" mouseSpeedFactor="0.2" iconName="TOP_DOOR_ROTATE" />
+                <rotation rotSpeed="50" rotAcceleration="120" rotMax="35" rotMin="0" startRot="10" rotationAxis="2"/>
+            </movingTool>
+			<movingTool node="0>0|9|4">
+                <controls groupIndex="2" axis="AXIS_CRANE_ARM3" invertAxis="false" mouseSpeedFactor="0.2" iconName="TOP_DOOR_ROTATE" />
+                <rotation rotSpeed="50" rotAcceleration="120" rotMax="35" rotMin="0" startRot="10" rotationAxis="2"/>
+            </movingTool>
+			<movingTool node="0>0|9|2">
+                <controls groupIndex="2" axis="AXIS_CRANE_ARM4" invertAxis="false" mouseSpeedFactor="0.2" iconName="TOP_DOOR_ROTATE" />
+                <rotation rotSpeed="50" rotAcceleration="120" rotMax="0" rotMin="-35" startRot="-10" rotationAxis="2"/>
+            </movingTool>
+			<movingTool node="0>0|9|3">
+                <controls groupIndex="2" axis="AXIS_CRANE_TOOL" invertAxis="false" mouseSpeedFactor="0.2" iconName="TOP_DOOR_ROTATE" />
+                <rotation rotSpeed="50" rotAcceleration="120" rotMax="0" rotMin="-35" startRot="-10" rotationAxis="2"/>
+            </movingTool>
+			<movingTool node="0>0|9|5">
+                <controls groupIndex="2" axis="AXIS_CRANE_TOOL2" invertAxis="false" mouseSpeedFactor="0.2" iconName="TOP_DOOR_ROTATE" />
+                <rotation rotSpeed="50" rotAcceleration="120" rotMax="0" rotMin="-35" startRot="-10" rotationAxis="2"/>
+            </movingTool>
+			
+			<movingTool node="backDoorArm" playSound="true">
+                <dependentPart node="backDoor" />
+                <dependentPart node="backDoorHydraulics" />
+            </movingTool>
+
+            <movingTool node="baleDropper" playSound="true">
+                <dependentPart node="baleDropperHydraulic" />
+            </movingTool>
+
+            <movingTool node="beltTensioner" playSound="true">
+                <dependentPart node="beltTensionerHydraulic" />
+                <dependentPart node="backDoorJointRotOrientation" />
+                <dependentPart node="baleChamberJointRotOrientation" />
+                <dependentPart node="beltTensionerJointDoorOrientation" />
+                <dependentPart node="beltTensionerJointChamberOrientation" />
+            </movingTool>
+
+            <movingTool node="preChamber" playSound="true"/>
+
+            <movingTool node="0>0|8|0" playSound="true"/>
+        </movingTools>
+
+        <movingParts>
+            <movingPart node="backDoor" localReferencePoint="backDoorOrientation" referencePoint="backDoorRef" referenceFrame="backDoorRefFrame">
+                <dependentPart node="backDoorOrientation" />
+                <dependentPart node="backDoorJointRotOrientation" />
+                <dependentPart node="baleChamberJointRotOrientation" />
+                <dependentPart node="beltTensionerJointDoorOrientation" />
+                <dependentPart node="beltTensionerJointChamberOrientation" />
+            </movingPart>
+            <movingPart node="backDoorOrientation" referencePoint="backDoorRef" referenceFrame="backDoorOrientationRefFrame" isActiveDirty="true" maxUpdateDistance="30"/>
+            <movingPart node="beltTensionerHydraulic" referencePoint="beltTensionerHydraulicRef" referenceFrame="beltTensionerHydraulicRef" isActiveDirty="true" maxUpdateDistance="30">
+                <translatingPart node="beltTensionerHydraulicPunch" />
+            </movingPart>
+            <movingPart node="backDoorJointRotOrientation" referencePoint="backDoorJointRotOrientationRef" referenceFrame="backDoorJointRotOrientationRefFrame" isActiveDirty="true" maxUpdateDistance="30"/>
+            <movingPart node="baleChamberJointRotOrientation" referencePoint="baleChamberJointRotOrientationRef" referenceFrame="baleChamberJointRotOrientationRef" isActiveDirty="true" maxUpdateDistance="30"/>
+            <movingPart node="beltTensionerJointDoorOrientation" referencePoint="beltTensionerJointDoorOrientationRef" referenceFrame="beltTensionerJointDoorOrientationRefFrame" isActiveDirty="true" maxUpdateDistance="30"/>
+            <movingPart node="beltTensionerJointChamberOrientation" referencePoint="beltTensionerJointChamberOrientationRef" referenceFrame="beltTensionerJointChamberOrientationRef" isActiveDirty="true" maxUpdateDistance="30"/>
+            <movingPart node="steeringArmLeft" referencePoint="steeringArmLeftRef" referenceFrame="steeringArmLeftRef" isActiveDirty="true" scaleZ="true" maxUpdateDistance="30"/>
+            <movingPart node="steeringArmRight" referencePoint="steeringArmRightRef" referenceFrame="steeringArmRightRef" isActiveDirty="true" scaleZ="true" maxUpdateDistance="30"/>
+            <movingPart node="baleDropperHydraulic" referencePoint="baleDropperHydraulicRef" referenceFrame="baleDropperHydraulicRef" isActiveDirty="true" maxUpdateDistance="30">
+                <translatingPart node="baleDropperHydraulicPunch" />
+            </movingPart>
+            <movingPart node="backDoorHydraulics" referencePoint="backDoorHydraulicsRef" referenceFrame="backDoorHydraulicsRef" isActiveDirty="true" maxUpdateDistance="30">
+                <translatingPart node="backDoorHydraulicsPunch" />
+            </movingPart>
+		    <movingPart node="0>0|16|1" referencePoint="0>0|16|2|0" referenceFrame="0>0|16|2|0" isActiveDirty="true" maxUpdateDistance="50">
+                <translatingPart node="0>0|16|1|0" />
+            </movingPart>
+			<movingPart node="0>0|5|5|0" referencePoint="0>0|8|3|9|4" referenceFrame="0>0|8|3|9|4" isActiveDirty="true" scaleZ="true" maxUpdateDistance="-"/>
+			<movingPart node="0>0|5|5|1" referencePoint="0>0|8|3|9|5" referenceFrame="0>0|8|3|9|5" isActiveDirty="true" scaleZ="true" maxUpdateDistance="-"/>
+			<movingPart node="0>0|8|3|9|0" referencePoint="0>0|8|3|1|1" referenceFrame="0>0|8|3|1|1" isActiveDirty="true" scaleZ="true" maxUpdateDistance="-"/>
+			<movingPart node="0>0|8|3|9|2" referencePoint="0>0|8|3|1|2" referenceFrame="0>0|8|3|1|2" isActiveDirty="true" scaleZ="true" maxUpdateDistance="-"/>
+			<movingPart node="0>0|8|3|9|3" referencePoint="0>0|8|3|0|2|0|9|2" referenceFrame="0>0|8|3|0|2|0|9|2" isActiveDirty="true" scaleZ="true" maxUpdateDistance="-"/>
+			<movingPart node="0>0|16|3" referencePoint="0>0|16|2|2" referenceFrame="0>0|16|2|2" isActiveDirty="true" scaleZ="true" maxUpdateDistance="-"/>
+			<movingPart node="0>0|16|0|0|0|0" referencePoint="0>0|8|2|10|0" referenceFrame="0>0|8|2|10|0" isActiveDirty="true" scaleZ="true" maxUpdateDistance="-"/>
+			<movingPart node="0>0|4|3|0|1" referencePoint="0>0|4|3|0|0|0|0|0" referenceFrame="0>0|4|3|0|0|0|0|0" isActiveDirty="true" scaleZ="true" maxUpdateDistance="-"/>
+			<movingPart node="0>0|0|4|1" referencePoint="0>0|0|3|0" referenceFrame="0>" isActiveDirty="true" maxUpdateDistance="300"/>
+            <movingPart node="0>0|0|6|1" referencePoint="0>0|0|5|0" referenceFrame="0>" isActiveDirty="true" maxUpdateDistance="300"/>
+		</movingParts>
+    </cylindered>
+
+    <suspensions>
+        <suspension node="0>0|4|1|0|0"              weight="150" minTranslation="-0.05 -0.15 0.0" maxTranslation="0.05 0.15 0.0" suspensionParametersX="20 4" suspensionParametersY="5 1" suspensionParametersZ="20 4" />
+        <suspension useCharacterTorso="true" weight="90" minRotation="0 -5 -5" maxRotation="0 5 5" suspensionParametersY="7 1" suspensionParametersZ="7 1" />
+        <suspension node="0>0|8|3|0|2|0|5|0|0|0" weight="5400" minRotation="-55 -20 0" maxRotation="55 5 0" suspensionParametersX="50 10" suspensionParametersZ="50 10" />
+	    <suspension node="0>0|4|3|3|0" weight="4000" minRotation="-1 -1 -1" maxRotation="1 1 1" suspensionParametersX="50 10" suspensionParametersZ="50 10" />
+	</suspensions>
+
+    <dashboard>
+        <groups>
+            <group name="MOTOR_STARTING" isMotorStarting="true"/>
+            <group name="MOTOR_ACTIVE"   isMotorStarting="true" isMotorRunning="true"/>
+			<group name="MOTOR_ANIMACAO"   isMotorStarting="false" isMotorRunning="true"/>
+        </groups>
+		
+		 <default>
+            <dashboard displayType="EMITTER" node="0>0|4|4|0|1" idleValue="-1" intensity="0.8" groups="MOTOR_ACTIVE" />
+			<dashboard displayType="VISIBILITY" node="0>0|4|4|0|1"  groups="MOTOR_ACTIVE" />
+			<dashboard displayType="EMITTER" node="0>0|4|4|0|2" idleValue="-1" intensity="0.8" groups="MOTOR_STARTING" />
+			<dashboard displayType="VISIBILITY" node="0>0|4|4|0|2"  groups="MOTOR_STARTING" />
+			<dashboard displayType="EMITTER" node="0>0|4|4|0|0" idleValue="-1" intensity="-1" groups="MOTOR_ACTIVE" />
+			<dashboard displayType="VISIBILITY" node="0>0|4|4|1"  groups="MOTOR_ACTIVE" />
+			<dashboard displayType="EMITTER" node="0>0|4|4|1|2|0" idleValue="-1" intensity="10" groups="MOTOR_ACTIVE" />
+			<dashboard displayType="EMITTER" node="0>0|4|4|1|2|1" idleValue="-1" intensity="10" groups="MOTOR_ACTIVE" />
+			<dashboard displayType="EMITTER" node="0>0|4|4|1|2|2" idleValue="-1" intensity="10" groups="MOTOR_ACTIVE" />
+			<dashboard displayType="EMITTER" node="0>0|4|5|0|1" idleValue="0" intensity="1" groups="MOTOR_ACTIVE" />
+			<dashboard displayType="EMITTER" node="0>0|4|2|1" idleValue="0" intensity="1" groups="MOTOR_ACTIVE" />
+			<dashboard displayType="EMITTER" node="0>0|4|1|0|0|2|1" idleValue="0" intensity="1" groups="MOTOR_ACTIVE" />
+			<dashboard displayType="EMITTER" node="0>0|4|1|0|0|5" idleValue="0" intensity="1" groups="MOTOR_ACTIVE" />
+			<dashboard displayType="EMITTER" node="0>0|4|1|0|0|3|0" idleValue="-1" intensity="0.5" groups="MOTOR_ANIMACAO" />
+			<dashboard displayType="VISIBILITY" node="0>0|4|1|0|0|3|1"  groups="MOTOR_ANIMACAO" />
+			<dashboard displayType="EMITTER" node="0>0|4|1|0|0|3|0|0" idleValue="-1" intensity="0.5" groups="MOTOR_ANIMACAO" />
+			<dashboard displayType="EMITTER" node="0>0|4|1|0|0|3|0|0|0" idleValue="-1" intensity="0.5" groups="MOTOR_ANIMACAO" />
+			<dashboard displayType="EMITTER" node="0>0|4|1|0|0|3|0|1" idleValue="-1" intensity="0.5" groups="MOTOR_ANIMACAO" />
+			<dashboard displayType="EMITTER" node="0>0|4|4|5" idleValue="-1" intensity="0.5" groups="MOTOR_ANIMACAO" />
+			<dashboard displayType="VISIBILITY" node="0>0|4|4|4"  groups="MOTOR_ANIMACAO" />
+			<dashboard displayType="EMITTER" node="0>0|4|5|0|0" idleValue="-1" intensity="0.5" groups="MOTOR_ACTIVE" />
+			<dashboard displayType="EMITTER" node="0>0|4|4|6" idleValue="-1" intensity="0.5" groups="MOTOR_STARTING" />
+			<dashboard displayType="EMITTER" node="0>0|4|4|6|0" idleValue="-1" intensity="0.5" groups="MOTOR_STARTING" />
+			<dashboard displayType="VISIBILITY" node="0>0|4|4|6"  groups="MOTOR_STARTING" />
+			<dashboard displayType="VISIBILITY" node="0>0|4|1|0|0|3|3"  groups="MOTOR_STARTING" />
+			<dashboard displayType="EMITTER" node="0>0|4|1|0|0|3|2" idleValue="-1" intensity="0.5" groups="MOTOR_STARTING" />
+			<dashboard displayType="EMITTER" node="0>0|4|1|0|0|3|2|0" idleValue="-1" intensity="0.5" groups="MOTOR_STARTING" />
+			<dashboard displayType="VISIBILITY" node="0>0|4|1|0|0|3|2"  groups="MOTOR_STARTING" />
+			<dashboard displayType="VISIBILITY" node="0>0|4|4|7"  groups="MOTOR_STARTING" />
+			<dashboard displayType="VISIBILITY" node="0>0|4|4|5|0"  groups="MOTOR_ANIMACAO" />
+			<dashboard displayType="VISIBILITY" node="0>0|4|4|5|1"  groups="MOTOR_ANIMACAO" />
+        </default>
+    </dashboard>
+
+    <ai>
+        <agent width="5" length="10" height="3.7" lengthOffset="-2.65" frontOffset="-0.32" />
+        <collisionTrigger node="aiCollisionNode" width="5" height="5.5"/>
+    </ai>
+
+    <foliageBending>
+        <bendingNode minX="-2.2" maxX="2.2" minZ="-2.3" maxZ="2.0" yOffset="0.6" />
+        <bendingNode minX="-1.8" maxX="1.8" minZ="-4.4" maxZ="-2.3" yOffset="0.6" />
+        <bendingNode minX="-1.4" maxX="1.4" minZ="-0.9" maxZ="0.6" yOffset="0.05" node="baleDropperFoliageBending"/>
+    </foliageBending>
+
+    <designConfigurations title="$l10n_janelas">
+        <designConfiguration name="$l10n_configuration_valueDefault" price="0">
+			<objectChange node="0>0|10|0|0|0" visibilityActive="true" visibilityInactive="false"/>
+			<objectChange node="0>0|10|1|0" visibilityActive="true" visibilityInactive="false"/>
+		</designConfiguration>
+		<designConfiguration name="$l10n_fume1" price="100">
+            <objectChange node="0>0|10|0|0|1" visibilityActive="true" visibilityInactive="false"/>
+			<objectChange node="0>0|10|1|1" visibilityActive="true" visibilityInactive="false"/>
+		</designConfiguration>
+		<designConfiguration name="$l10n_fume2" price="150">
+            <objectChange node="0>0|10|0|0|2" visibilityActive="true" visibilityInactive="false"/>
+			<objectChange node="0>0|10|1|2" visibilityActive="true" visibilityInactive="false"/>
+		</designConfiguration>
+		<designConfiguration name="$l10n_fume3" price="200">
+            <objectChange node="0>0|10|0|0|3" visibilityActive="true" visibilityInactive="false"/>
+			<objectChange node="0>0|10|1|3" visibilityActive="true" visibilityInactive="false"/>
+		</designConfiguration>
+	</designConfigurations>
+ 
+	<design2Configurations title="$l10n_espelhos">
+        <design2Configuration name="$l10n_configuration_valueDefault" price="0">
+			<objectChange node="0>0|10|2|0" visibilityActive="true" visibilityInactive="false"/>
+			<objectChange node="0>0|10|2|0|0" visibilityActive="true" visibilityInactive="false"/>
+			<objectChange node="0>0|9|4" visibilityActive="false"/>
+			<objectChange node="0>0|9|5" visibilityActive="false"/>
+		</design2Configuration>
+		<design2Configuration name="$l10n_triplo" price="800">
+			<objectChange node="0>0|10|2|0" visibilityActive="true" visibilityInactive="false"/>
+			<objectChange node="0>0|10|2|0|1" visibilityActive="true" visibilityInactive="false"/>
+			<objectChange node="0>0|9|0" translationActive="2.432 3.642 3.314"/>
+			<objectChange node="0>0|9|1" translationActive="1.862 3.642 3.314"/>
+			<objectChange node="0>0|9|2" translationActive="-1.862 3.642 3.314"/>
+			<objectChange node="0>0|9|3" translationActive="-2.432 3.642 3.314"/>
+		</design2Configuration>
+		<design2Configuration name="$l10n_duplopreto" price="600">
+			<objectChange node="0>0|10|2|1" visibilityActive="true" visibilityInactive="false"/>
+			<objectChange node="0>0|10|2|1|7" visibilityActive="false"/>
+			<objectChange node="0>0|9|4" visibilityActive="false"/>
+			<objectChange node="0>0|9|5" visibilityActive="false"/>
+			<objectChange node="0>0|9|0" translationActive="2.132 3.595 3.368"/>
+			<objectChange node="0>0|9|1" translationActive="1.532 3.595 3.368"/>
+			<objectChange node="0>0|9|2" translationActive="-1.532 3.595 3.368"/>
+			<objectChange node="0>0|9|3" translationActive="-2.132 3.595 3.368"/>
+		</design2Configuration>
+		<design2Configuration name="$l10n_duploverde" price="600">
+			<objectChange node="0>0|10|2|1" visibilityActive="true" visibilityInactive="false"/>
+			<objectChange node="0>0|10|2|1|6" visibilityActive="false"/>
+			<objectChange node="0>0|9|4" visibilityActive="false"/>
+			<objectChange node="0>0|9|5" visibilityActive="false"/>
+			<objectChange node="0>0|9|0" translationActive="2.132 3.595 3.368"/>
+			<objectChange node="0>0|9|1" translationActive="1.532 3.595 3.368"/>
+			<objectChange node="0>0|9|2" translationActive="-1.532 3.595 3.368"/>
+			<objectChange node="0>0|9|3" translationActive="-2.132 3.595 3.368"/>
+		</design2Configuration>
+	</design2Configurations>
+	
+	<design3Configurations title="$l10n_numeros">
+        <design3Configuration name="$l10n_configuration_valueDefault" price="0">
+			<objectChange node="0>0|8|2|9" visibilityActive="false"/>
+		</design3Configuration>
+		<design3Configuration name="1" price="20">
+			<objectChange node="0>0|8|2|9|0" visibilityActive="true" visibilityInactive="false"/>
+		</design3Configuration>
+		<design3Configuration name="2" price="20">
+			<objectChange node="0>0|8|2|9|1" visibilityActive="true" visibilityInactive="false"/>
+		</design3Configuration>
+		<design3Configuration name="3" price="20">
+			<objectChange node="0>0|8|2|9|2" visibilityActive="true" visibilityInactive="false"/>
+		</design3Configuration>
+		<design3Configuration name="4" price="20">
+			<objectChange node="0>0|8|2|9|3" visibilityActive="true" visibilityInactive="false"/>
+		</design3Configuration>
+		<design3Configuration name="5" price="20">
+			<objectChange node="0>0|8|2|9|4" visibilityActive="true" visibilityInactive="false"/>
+		</design3Configuration>
+		<design3Configuration name="6" price="20">
+			<objectChange node="0>0|8|2|9|5" visibilityActive="true" visibilityInactive="false"/>
+		</design3Configuration>
+		<design3Configuration name="7" price="20">
+			<objectChange node="0>0|8|2|9|6" visibilityActive="true" visibilityInactive="false"/>
+		</design3Configuration>
+		<design3Configuration name="8" price="20">
+			<objectChange node="0>0|8|2|9|7" visibilityActive="true" visibilityInactive="false"/>
+		</design3Configuration>
+		<design3Configuration name="9" price="20">
+			<objectChange node="0>0|8|2|9|8" visibilityActive="true" visibilityInactive="false"/>
+		</design3Configuration>
+	</design3Configurations>
+	
+	<design4Configurations title="$l10n_monitorcamera">
+        <design4Configuration name="$l10n_configuration_valueNo" price="0">
+			<objectChange node="0>0|4|5|0" visibilityActive="false"/>
+		</design4Configuration>
+		 <design4Configuration name="$l10n_configuration_valueYes" price="150"/>
+	</design4Configurations>
+
+    <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
+    <washable dirtDuration="90" washDuration="1" workMultiplier="4" fieldMultiplier="2"/>
+
+    <i3dMappings>
+        <i3dMapping id="cp690_main_component1" node="0>" />
+        <i3dMapping id="cp690_vis" node="0>0" />
+        <i3dMapping id="wheelFrontLeft" node="0>0|0|0" />
+        <i3dMapping id="wheelFrontLeftHub" node="0>0|0|0|0" />
+        <i3dMapping id="wheelFrontRight" node="0>0|0|1" />
+        <i3dMapping id="wheelFrontRightHub" node="0>0|0|1|0" />
+        <i3dMapping id="backAxisJoint" node="0>0|0|2" />
+        <i3dMapping id="outdoorCameraTarget" node="0>0|1|0" />
+        <i3dMapping id="outdoorCamera" node="0>0|1|0|0" />
+        <i3dMapping id="indoorCamera" node="0>0|4|1|0|1" />
+        <i3dMapping id="cameraRaycastNode1" node="0>0|1|1" />
+        <i3dMapping id="cameraRaycastNode2" node="0>0|1|2" />
+        <i3dMapping id="cameraRaycastNode3" node="0>0|1|3" />
+        <i3dMapping id="cameraRaycastNode4" node="0>0|1|4" />
+        <i3dMapping id="shadowFocusBox" node="0>0|1|5" />
+        <i3dMapping id="exitPoint" node="0>0|3" />
+        <i3dMapping id="areaMarkerLeft" node="0>0|6|0|0" />
+        <i3dMapping id="areaMarkerRight" node="0>0|6|0|1" />
+        <i3dMapping id="areaMarkerBack" node="0>0|6|0|2" />
+        <i3dMapping id="sizeMarkerLeft" node="0>0|6|1|0" />
+        <i3dMapping id="sizeMarkerRight" node="0>0|6|1|1" />
+        <i3dMapping id="sizeMarkerBack" node="0>0|6|1|2" />
+        <i3dMapping id="aiCollisionNode" node="0>0|6|2" />
+        <i3dMapping id="exhaustParticle" node="0>0|7|0" />
+        <i3dMapping id="preChamber" node="0>0|8|2" />
+        <i3dMapping id="workLightsBackStatic01" node="0>0|8|2|6|0|0" />
+        <i3dMapping id="workLightsBackStatic02" node="0>0|8|2|6|0|1" />
+        <i3dMapping id="workLightBackLow" node="0>0|8|2|6|1|0" />
+        <i3dMapping id="loadingEmitter01" node="0>0|8|2|7|0" />
+        <i3dMapping id="loadingEmitter02" node="0>0|8|2|7|1" />
+        <i3dMapping id="baleChamber" node="0>0|8|3" />
+        <i3dMapping id="backDoorArm" node="0>0|8|3|0" />
+        <i3dMapping id="backDoorRefFrame" node="0>0|8|3|0|0" />
+        <i3dMapping id="backDoorHydraulicsRef" node="0>0|8|3|0|1" />
+        <i3dMapping id="backDoor" node="0>0|8|3|0|2|0" />
+        <i3dMapping id="backDoorOrientation" node="0>0|8|3|0|2|0|0" />
+        <i3dMapping id="backDoorOrientationRefFrame" node="0>0|8|3|0|2|0|1" />
+        <i3dMapping id="bigTriangle01" node="0>0|8|3|0|2|0|2|0" />
+        <i3dMapping id="beaconLight01" node="0>0|10|2|0|5" />
+        <i3dMapping id="beaconLight02" node="0>0|8|3|0|2|0|2|1" />
+        <i3dMapping id="beaconLight03" node="0>0|10|2|1|5" />
+        <i3dMapping id="backDoorJointRotOrientation" node="0>0|8|3|0|2|0|5" />
+        <i3dMapping id="backDoorJointRot" node="0>0|8|3|0|2|0|5|0|0" />
+        <i3dMapping id="beltTensionerJointDoorOrientationRef" node="0>0|8|3|0|2|0|6" />
+        <i3dMapping id="backDoorJointRotOrientationRefFrame" node="0>0|8|3|0|2|0|7" />
+        <i3dMapping id="workLightBackStatic" node="0>0|8|3|0|2|0|14|0" />
+        <i3dMapping id="backDoorHydraulics" node="0>0|8|3|1" />
+        <i3dMapping id="backDoorHydraulicsPunch" node="0>0|8|3|1|0" />
+        <i3dMapping id="backDoorRef" node="0>0|8|3|2" />
+        <i3dMapping id="baleNode" node="0>0|8|3|3|0" />
+        <i3dMapping id="beltTensioner" node="0>0|8|3|4" />
+        <i3dMapping id="beltTensionerHydraulicRef" node="0>0|8|3|4|0" />
+        <i3dMapping id="beltTensionerJointDoorOrientation" node="0>0|8|3|4|2" />
+        <i3dMapping id="beltTensionerJointDoor" node="0>0|8|3|4|2|0|0" />
+        <i3dMapping id="beltTensionerJointChamberOrientation" node="0>0|8|3|4|3" />
+        <i3dMapping id="beltTensionerJointChamber" node="0>0|8|3|4|3|0|0" />
+        <i3dMapping id="backDoorJointRotOrientationRef" node="0>0|8|3|4|4" />
+        <i3dMapping id="baleChamberJointRotOrientationRef" node="0>0|8|3|4|5" />
+        <i3dMapping id="beltTensionerHydraulic" node="0>0|8|3|5" />
+        <i3dMapping id="beltTensionerHydraulicPunch" node="0>0|8|3|5|0" />
+        <i3dMapping id="baleChamberJointRotOrientation" node="0>0|8|3|7" />
+        <i3dMapping id="baleChamberJointRot" node="0>0|8|3|7|0|0" />
+        <i3dMapping id="beltTensionerJointChamberOrientationRef" node="0>0|8|3|8" />
+        <i3dMapping id="baleDropper" node="0>0|8|4" />
+        <i3dMapping id="baleDropperHydraulicRef" node="0>0|8|4|1" />
+        <i3dMapping id="baleDropperCollision01" node="0>0|8|4|2" />
+        <i3dMapping id="baleDropperCollision02" node="0>0|8|4|3" />
+        <i3dMapping id="lightsBackStatic" node="0>0|8|4|4|0|0" />
+        <i3dMapping id="turnLightLeft03" node="0>0|8|4|4|0|1" />
+        <i3dMapping id="turnLightRight03" node="0>0|8|4|4|0|2" />
+        <i3dMapping id="backLightsHigh" node="0>0|8|4|4|1|0" />
+        <i3dMapping id="turnLightLeftBack" node="0>0|8|4|4|2|0" />
+        <i3dMapping id="turnLightRightBack" node="0>0|8|4|4|2|1" />
+        <i3dMapping id="baleDropperFoliageBending" node="0>0|8|4|5" />
+        <i3dMapping id="dynamicMountTrigger" node="0>0|8|4|10" />
+        <i3dMapping id="baleDropperHydraulic" node="0>0|8|5" />
+        <i3dMapping id="baleDropperHydraulicPunch" node="0>0|8|5|0" />
+        <i3dMapping id="airFilterCleaner" node="0>0|8|9" />
+        <i3dMapping id="auger" node="0>0|8|10" />
+        <i3dMapping id="beltTensionerJointDoorOrientationRefFrame" node="0>0|8|12" />
+        <i3dMapping id="pickerUnitsLowerArmRefFrame" node="0>0|8|14" />
+        <i3dMapping id="fillVolume" node="0>0|11|0" />
+        <i3dMapping id="exterior02" node="0>0|14|0" />
+        <i3dMapping id="exterior03" node="0>0|14|1" />
+        <i3dMapping id="alphaDetails" node="0>0|14|2" />
+        <i3dMapping id="baleChamberCover" node="0>1|0" />
+        <i3dMapping id="chamberBelt" node="0>1|1" />
+        <i3dMapping id="axisBackLeft" node="1>0|0" />
+        <i3dMapping id="wheelBackLeft" node="1>0|0|0" />
+        <i3dMapping id="steeringArmLeftRef" node="1>0|0|1" />
+        <i3dMapping id="axisBackRight" node="1>0|1" />
+        <i3dMapping id="wheelBackRight" node="1>0|1|0" />
+        <i3dMapping id="steeringArmRightRef" node="1>0|1|1" />
+        <i3dMapping id="steeringBar" node="1>0|2" />
+        <i3dMapping id="steeringArmLeft" node="1>0|2|0" />
+        <i3dMapping id="steeringArmRight" node="1>0|2|1" />
+        <i3dMapping id="bigTriangle02" node="1>0|3" />
+    </i3dMappings>
+</vehicle>

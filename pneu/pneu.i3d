@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="pneu.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="9.0.4"/>
+  </Asset>
+
+  <Files>
+    <File fileId="4" filename="$data/shaders/vehicleShader.xml"/>
+    <File fileId="9" filename="$data/shared/wheels/rims/rim009_vmask.png"/>
+    <File fileId="2" filename="../texturas/aroDuplagem_normal.dds"/>
+    <File fileId="3" filename="../texturas/aroDuplagem_vmaks.dds"/>
+    <File fileId="8" filename="../texturas/aroTraseiro_normal.dds"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="default" materialId="5" diffuseColor="0.494118 0.494118 0.494118 1" customShaderId="4" customShaderVariation="colorMask">
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+      <CustomParameter name="colorMat0" value="1 0.7231 0 0"/>
+    </Material>
+    <Material name="rim009_mat" materialId="6" diffuseColor="0.494118 0.494118 0.494118 1" customShaderId="4" customShaderVariation="rim_colorMask">
+      <Normalmap fileId="8"/>
+      <Glossmap fileId="9"/>
+      <CustomParameter name="colorMat0" value="1 0.721 0 0"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="pneu.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+      <TransformGroup name="arosFrente" nodeId="16">
+        <Shape shapeId="1" name="aroDuplagemDentroE" clipDistance="300" nodeId="17" materialIds="5" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="2" name="aroDuplagemDentroD" clipDistance="300" nodeId="18" materialIds="5" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="3" name="aroDuplagemForaE" clipDistance="300" nodeId="19" materialIds="5" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="4" name="aroDuplagemForaD" clipDistance="300" nodeId="20" materialIds="5" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="5" name="aroTransporteE" clipDistance="300" nodeId="21" materialIds="5" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="6" name="aroTransporteD" clipDistance="300" nodeId="22" materialIds="5" castsShadows="true" receiveShadows="true"/>
+      </TransformGroup>
+      <TransformGroup name="aroTraseiro" nodeId="23">
+        <Shape shapeId="7" name="w_innerLeft" clipDistance="800" nodeId="24" materialIds="6" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="8" name="w_innerRight" clipDistance="800" nodeId="25" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      </TransformGroup>
+  </Scene>
+
+</i3D>
