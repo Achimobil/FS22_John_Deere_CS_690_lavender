@@ -3,7 +3,7 @@
     <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
 
     <storeData>
-        <name>608SH</name>
+        <name>608SH Lavender</name>
         <specs>
             <workingWidth>6.8</workingWidth>
 			<combination xmlFilename="CS690.xml" />
@@ -110,7 +110,7 @@
         <dynamicallyLoadedPart node="0|0" linkNode="0>0|2|5|4" filename="$data/shared/connectionHoses/connectors.i3d" />
     </dynamicallyLoadedParts>
 
-    <cutter fruitTypes="cotton">
+    <cutter fruitTypes="LAVENDER">
 	    <animationNodes>
 			<animationNode node="0>0|1|0" rotSpeed="500" rotAxis="1" turnOnFadeTime="4" turnOffFadeTime="3" />
 			<animationNode node="0>0|1|1" rotSpeed="500" rotAxis="1" turnOnFadeTime="4" turnOffFadeTime="3" />

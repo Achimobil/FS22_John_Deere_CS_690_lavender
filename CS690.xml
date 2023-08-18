@@ -3,7 +3,7 @@
     <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
 
     <storeData>
-        <name>CS690</name>
+        <name>CS690 Lavender</name>
         <specs>
             <power>550</power>
             <maxSpeed>32</maxSpeed>
@@ -810,11 +810,11 @@
         <fillUnitConfigurations>
             <fillUnitConfiguration>
                 <fillUnits allowFoldingWhileFilled="false" allowFoldingThreshold="11000">
-                    <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypes="cotton" capacity="10000">
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypes="LAVENDER" capacity="10000">
                         <dashboard displayType="ANIMATION" valueType="fillLevel" animName="tensionerAnimation" />
 					    <dashboard displayType="NUMBER" valueType="fillLevel" numbers="0>0|4|1|0|0|3|0|2"  numberColor="0.016 0.016 0.016 1" precision="0" emissiveScale="1" groups="MOTOR_ACTIVE"/>
 					</fillUnit>
-                    <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypes="cotton" capacity="2500" showInShop="false">
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypes="LAVENDER" capacity="2500" showInShop="false">
 					    <dashboard displayType="NUMBER" valueType="fillLevel" numbers="0>0|4|1|0|0|3|0|3"  numberColor="0.016 0.016 0.016 1" precision="0" emissiveScale="1" groups="MOTOR_ACTIVE"/>
 					</fillUnit>
 					<fillUnit unitTextOverride="$l10n_unit_literShort" showOnHud="false" showInShop="false" fillTypes="diesel" capacity="1022">
@@ -823,7 +823,7 @@
                     <fillUnit unitTextOverride="$l10n_unit_literShort" showOnHud="false" showInShop="false" showOnInfoHud="false" fillTypes="def" capacity="61">
                         <dashboard displayType="ANIMATION" valueType="fillLevel" animName="loadingBarDef" groups="MOTOR_ACTIVE"/>
                     </fillUnit>
-					<fillUnit unitTextOverride="$l10n_unit_literShort" fillTypes="cotton" capacity="500" showInShop="false"/>
+					<fillUnit unitTextOverride="$l10n_unit_literShort" fillTypes="LAVENDER" capacity="500" showInShop="false"/>
                 </fillUnits>
             </fillUnitConfiguration>
         </fillUnitConfigurations>
