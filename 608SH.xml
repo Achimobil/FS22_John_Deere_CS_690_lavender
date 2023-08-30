@@ -3,7 +3,7 @@
     <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
 
     <storeData>
-        <name>608SH Lavender</name>
+        <name>$l10n_608shLavender</name>
         <specs>
             <workingWidth>6.8</workingWidth>
 			<combination xmlFilename="CS690.xml" />

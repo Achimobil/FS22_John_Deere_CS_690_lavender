@@ -3,7 +3,7 @@
     <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
 
     <storeData>
-        <name>CS690 Lavender</name>
+        <name>$l10n_cs690Lavender</name>
         <specs>
             <power>550</power>
             <maxSpeed>32</maxSpeed>
@@ -726,7 +726,7 @@
         </differentialConfigurations>
 
         <motorConfigurations>
-            <motorConfiguration name="CS690" hp="550" price="0">
+            <motorConfiguration name="$l10n_cs690Lavender" hp="550" price="0">
                 <motor torqueScale="2.22" minRpm="850" maxRpm="2200" maxForwardSpeed="32" maxBackwardSpeed="15" brakeForce="15" lowBrakeForceScale="0.22" accelerationLimit="1.6" dampingRateScale="2.5" startAnimationName="barragps">
                     <torque normRpm="0.45" torque="0.9"/>
                     <torque normRpm="0.5" torque="0.97"/>

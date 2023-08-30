@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<modDesc descVersion="75">
-    <author>Agro Tonho</author>
+<modDesc descVersion="77">
+    <author>Achimobil</author>
+    <contributor>Agro Tonho</contributor>
     <version>1.0.0.0</version>
     <title>
         <en>John Deere CS 690 And 606SH/608SH Lavender</en>
@@ -130,5 +131,9 @@ John Deere 608SH
 		<text name="fume2"><en>Smoked 2</en><de>Getönt 2</de><br>Fumê 2</br></text>
 		<text name="fume3"><en>Smoked 3</en><de>Getönt 3</de><br>Fumê 3</br></text>
 		<text name="monitorcamera"><en>Camera panel</en><de>Kamerapanel</de><br>Painel da câmera</br></text>
+		<text name="geral"><en>General</en><de>allgemein</de><br>Geral</br></text>
+		<text name="cs690Lavender"><en>CS690 Lavender</en><de>CS690 Lavendel</de><br>CS690 Lavanda</br></text>
+		<text name="608shLavender"><en>608SH Lavender</en><de>608SH Lavendel</de><br>608SH Lavanda</br></text>
+		<text name="606shLavender"><en>606SH Lavender</en><de>606SH Lavendel</de><br>606SH Lavanda</br></text>
 	</l10n>
 </modDesc>
