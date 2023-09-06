@@ -121,6 +121,9 @@ John Deere 608SH
 		<storeItem xmlFilename="606SH.xml"/>
 		<storeItem xmlFilename="608SH.xml"/>
     </storeItems>
+	<bales>
+		<bale filename="bales/lavenderRoundbale238.xml" />
+	</bales>
 	
 	<vehicleTypes>
 		<type name="CS690" parent="combineDrivable" className="Vehicle" filename="$dataS/scripts/vehicles/Vehicle.lua">
