@@ -13,8 +13,8 @@
     <fillTypes>
         <fillType name="lavender" capacity="5000" mass="1000">
             <diffuse filename="bales/lavender_bale_diffuses.png"/>
-            <normal filename="$data/objects/cottonModules/bale_normal.png"/>
-            <specular filename="$data/objects/cottonModules/bale_specular.png"/>
+            <normal filename="bales/lavender_bale_normal.png"/>
+            <specular filename="bales/lavender_bale_specular.png"/>
         </fillType>
     </fillTypes>
 </bale>

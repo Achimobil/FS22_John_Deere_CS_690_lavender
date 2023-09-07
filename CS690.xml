@@ -872,7 +872,7 @@
 
         <platform animationName="dropBale" nextBaleTime="0.7619" aiSpeed="3"/>
 
-        <buffer fillUnitIndex="2" overloadingDuration="5" balerDisplayType="ROUNDBALE_COTTON"/>
+        <buffer fillUnitIndex="2" overloadingDuration="5" balerDisplayType="ROUNDBALE_LAVENDER"/>
 
         <animationNodes>
             <animationNode node="chamberBelt" class="ScrollingAnimation"  shaderParameterName="offsetUV" scrollSpeed="1" shaderParameterComponent="2" turnOnFadeTime="1" turnOffFadeTime="1"/>
