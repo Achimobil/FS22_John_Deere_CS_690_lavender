@@ -2,7 +2,7 @@
 <modDesc descVersion="79">
     <author>Achimobil, Agro Tonho</author>
     <contributor>Agro Tonho, bgo1973</contributor>
-    <version>1.0.0.1</version>
+    <version>1.0.0.2</version>
     <title>
         <en>John Deere CS 690 And 606SH/608SH Lavender</en>
         <de>John Deere CS 690 Und 606SH/608SH Lavendel</de>
@@ -11,6 +11,8 @@
         <en>
 <![CDATA[The John Deere CS690 has served well as a cotton harvester. Due to its capacity and ease of use, its scope of duties was expanded to include lavender. For this purpose, the cutters were modified to cut lavender in a realistic size in 3 or 4 rows.
 The pressing chamber has been specially corrected for lavender so that the valuable lavender oil does not leak out on the field during pressing and the pressing ensures that the fresh harvest lasts longer until it can be processed further.
+
+To use this Harvester it is required that Lavender is build in the Map.
 
 This is a conversion of the <a href="https://www.farming-simulator.com/mod.php?mod_id=272153&title=fs2022">cotton harvester by Agro Tonho</a>.
 Feel free to post error messages and suggestions for improvement in the <a href="https://github.com/Achimobil/FS22_John_Deere_CS_690_lavender">GitHub</a>.
@@ -49,6 +51,8 @@ John Deere 608SH:
 Die Presskammer wurde speziell für Lavendel korrigiert, damit das Wertvolle Lavendelöl nicht schon beim Pressen auf dem Feld austritt und durch die Pressung wird eine Längere Haltbarkeit der frischen Ernte erreicht, bis diese weiter verarbeitet werden kann.
 Hierdurch sind die gepressten Ballen mit einer geringeren Kapazität als vergleichbare Ballen mit Baumwolle.
 
+Um diese Erntemaschine zu benutzen, muss Lavendel auf der Karte eingebaut sein.
+
 Dieser ist ein Umbau des <a href="https://www.farming-simulator.com/mod.php?mod_id=272153&title=fs2022">Baumwollernters von Agro Tonho</a>.
 Fehlermeldungen und Verbesserungsvorschläge gern im <a href="https://github.com/Achimobil/FS22_John_Deere_CS_690_lavender">GitHub</a> anbringen.
 
@@ -83,6 +87,8 @@ John Deere 608SH:
         <br>
 <![CDATA[O John Deere CS690 serviu bem como colheitadeira de algodão. Pela sua capacidade e facilidade de uso, seu escopo de atribuições foi ampliado para incluir a alfazema. Para tanto, os cortadores foram modificados para cortar a alfazema em tamanho realista em 3 ou 4 fileiras.
 A câmara de prensagem foi especialmente corrigida para lavanda, para que o valioso óleo de lavanda não vaze no campo durante a prensagem e a prensagem garante que a colheita fresca dure mais tempo até que possa ser processada posteriormente.
+
+Para usar esse Harvester, é necessário que Lavender esteja construído no mapa.
 
 Esta é uma conversão da <a href="https://www.farming-simulator.com/mod.php?mod_id=272153&title=fs2022">colhedora de algodão da Agro Tonho</a>.
 Sinta-se à vontade para postar mensagens de erro e sugestões de melhorias no <a href="https://github.com/Achimobil/FS22_John_Deere_CS_690_lavender">GitHub</a>.
