@@ -20,8 +20,8 @@
 		<shopFoldingState>1</shopFoldingState>
 		<shopTranslationOffset>0 -0.035 0</shopTranslationOffset>
         <shopRotationOffset>-3.516 0 0</shopRotationOffset>
-        <vertexBufferMemoryUsage>2719232</vertexBufferMemoryUsage>
-        <indexBufferMemoryUsage>482048</indexBufferMemoryUsage>
+        <vertexBufferMemoryUsage>2407168</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>413184</indexBufferMemoryUsage>
         <textureMemoryUsage>2490368</textureMemoryUsage>
         <audioMemoryUsage>0</audioMemoryUsage>
         <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>

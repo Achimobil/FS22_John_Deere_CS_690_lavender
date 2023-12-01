@@ -18,8 +18,8 @@
         <brand>JOHNDEERE</brand>
         <category>cottonHarvesting</category>
 		<shopFoldingState>1</shopFoldingState>
-        <vertexBufferMemoryUsage>3362816</vertexBufferMemoryUsage>
-        <indexBufferMemoryUsage>1034752</indexBufferMemoryUsage>
+        <vertexBufferMemoryUsage>2737408</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>508928</indexBufferMemoryUsage>
         <textureMemoryUsage>2293760</textureMemoryUsage>
         <audioMemoryUsage>0</audioMemoryUsage>
         <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
